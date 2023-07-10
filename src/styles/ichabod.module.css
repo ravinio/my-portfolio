@@ -1,0 +1,47 @@
+/* ----- container ----- */
+.bg {
+    background-color: #cdcbcb;
+    background-image: url("../assets/bg/ichabod.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* ----- top nav ----- */
+.color path {
+    fill: #1f1e1e;
+}
+
+.button {
+    font-family: 'Newsreader', serif;
+    color: #1f1e1e !important;
+}
+.button:hover {
+    background: rgba(31, 30, 30, .3) !important;
+}
+
+/* ----- home page ----- */
+.home {
+    font-family: 'Newsreader', serif;
+    color: #ff7518;
+}
+
+.myImage {
+    width: 447px;
+    height: 672px;
+    border-radius: 500px 500px 0px 0px;
+    background-image: url("../assets/me/its-me.GIF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+h1 {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 128px;
+}
+
+h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 32px;
+}

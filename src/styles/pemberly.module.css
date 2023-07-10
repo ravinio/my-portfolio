@@ -1,0 +1,45 @@
+/* ----- container ----- */
+.bg {
+    background-color: #98a5a1;
+    background-image: url("../assets/bg/pemberly.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* ----- top nav ----- */
+.color path {
+    fill: #c54455;
+}
+
+.button {
+    font-family: 'Aref Ruqaa Ink', serif;
+    color: #c54455 !important;
+}
+.button:hover {
+    background: rgba(197, 68, 85, .3) !important;
+}
+
+/* ----- home page ----- */
+.home {
+    font-family: 'Aref Ruqaa Ink', serif;
+    color: #c54455;
+}
+
+.myImage {
+    width: 447px;
+    height: 672px;
+    border-radius: 500px 500px 0px 0px;
+    background-image: url("../assets/me/its-me.GIF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+h1 {
+    font-family: 'Petit Formal Script', cursive;    font-size: 128px;
+}
+
+h2 {
+    font-size: 32px;
+}

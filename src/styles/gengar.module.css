@@ -1,0 +1,45 @@
+/* ----- container ----- */
+.bg {
+    background-color: #101819;
+    background-image: url("../assets/bg/gengar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+/* ----- top nav ----- */
+.color path {
+    fill: #e3e3eb;
+}
+.button {
+    font-family: 'Sulphur Point', sans-serif;
+    color: #e3e3eb !important;
+}
+.button:hover {
+    background: rgba(227, 227, 235, .3) !important;
+}
+
+/* ----- home page ----- */
+.home {
+    color: #e3e3eb !important;
+} 
+
+.myImage {
+    width: 447px;
+    height: 672px;
+    border-radius: 500px 500px 0px 0px;
+    background-image: url("../assets/me/its-me.GIF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+h1 {
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 32px;
+}

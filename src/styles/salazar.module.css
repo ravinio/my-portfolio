@@ -1,0 +1,46 @@
+/* ----- container ----- */
+.bg {
+    background-color: #101819;
+    background-image: url("../assets/bg/salazar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* ----- top nav ----- */
+.color path {
+    fill: #cad2c5;
+}
+
+.button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #cad2c5 !important;
+}
+.button:hover {
+    background: rgba(202, 210, 197, .3) !important;
+}
+
+/* ----- home page ----- */
+.home {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #cad2c5;
+}
+
+.myImage {
+    width: 447px;
+    height: 672px;
+    border-radius: 500px 500px 0px 0px;
+    background-image: url("../assets/me/its-me.GIF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 32px;
+}

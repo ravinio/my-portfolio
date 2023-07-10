@@ -1,0 +1,53 @@
+/* ----- container ----- */
+.bg {
+    background-color: #4f697a;
+    background-image: url("../assets/bg/wallace.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- top nav ----- */
+.color path {
+    fill: #f6e706;
+}
+.button {
+    font-family: 'Poppins', sans-serif;
+    color: #f6e706 !important;
+}
+.button:hover {
+    background: rgba(246, 231, 6, .3) !important;
+}
+
+/* ----- top nav ----- */
+.addPadding {
+    padding: 30px !important;
+}
+.color path {
+    fill: #f6e706;
+}
+
+/* ----- home page ----- */
+.home {
+    color: #f6e706;
+}
+
+.myImage {
+    width: 447px;
+    height: 672px;
+    border-radius: 500px 500px 0px 0px;
+    background-image: url("../assets/me/its-me.GIF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+h1 {
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 32px;
+}
