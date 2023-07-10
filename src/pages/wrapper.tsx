@@ -6,6 +6,8 @@ import {
 import TopNav from "../components/topNav"
 import Home from "./home"
 import About from "./about"
+import Skills from "./skills"
+import Contact from "./contact"
 
 interface WrapperProps {
   activeTheme: string;
@@ -23,12 +25,12 @@ const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
   };
 
   const backgroundStyle = {
-    height: '100vh',
     width: '100vw',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
-    fontFamily: theme.styles[activeTheme].body,
+    backgroundPosition: theme.styles[activeTheme].backgroundPosition,
+    fontFamily: theme.styles[activeTheme].body
   };
 
   return (
@@ -40,6 +42,8 @@ const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
       <TopNav activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
      </Box>
   );
 };

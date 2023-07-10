@@ -28,6 +28,7 @@ const MyApp = () => {
       },
       wallace: {
         background: 'rgba(79, 105, 122, 0.80)',
+        backgroundPosition: 'center',
         boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.4)',
         heading: 'Poppins, sans-serif',
         body: 'Poppins, sans-serif',

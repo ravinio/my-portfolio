@@ -8,9 +8,21 @@
 }
 
 h1 {
-    font-size: clamp(44px, 8vw, 94px);
+    line-height: initial;
+    font-size: calc(44px + (94 - 44) * ((100vw - 270px) / (1600 - 270)));
 }
 
 h2 {
-    font-size: clamp(14px, 3vw, 24px);
+    line-height: initial;
+    font-size: calc(14px + (24 - 14) * ((100vw - 270px) / (1600 - 270)));
+}
+
+/* ----- about page ----- */
+h3 {
+    line-height: initial;
+    font-size: calc(24px + (50 - 24) * ((100vw - 270px) / (1600 - 270)));
+}
+
+p {
+    font-size: calc(14px + (20 - 14) * ((100vw - 270px) / (1600 - 270)));
 }
