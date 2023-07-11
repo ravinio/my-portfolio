@@ -1,6 +1,6 @@
-import React from "react";
-import { Center, Flex, useTheme } from "@chakra-ui/react"
-import styles from "../styles/global.module.css"
+import React from 'react'
+import { Center, Flex, useTheme } from '@chakra-ui/react'
+import styles from '../styles/global.module.css'
 
 interface AboutProps {
   activeTheme: string;
@@ -26,16 +26,16 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h="100vh" className={styles.about}>
+    <Center h='100vh' className={styles.about}>
       <Flex 
         style={backgroundStyle}
         width={{ base: '100%', md: '768px' }}
-        alignItems="left"
-        flexDirection="column" 
-        justifyContent="center" 
+        alignItems='left'
+        flexDirection='column' 
+        justifyContent='center' 
         gap={{ base: '15px', md: '30px' }}
         padding={{ base: '15px', md: '30px' }}
-        borderRadius="10px"
+        borderRadius='10px'
       >
         <h3 style={subHeadingStyle}>about me</h3>
         <p style={bodyStyle}>

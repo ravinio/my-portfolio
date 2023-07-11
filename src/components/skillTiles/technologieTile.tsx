@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, Center, Flex, Image, Spacer, Stack, useTheme } from "@chakra-ui/react"
-import styles from "../../styles/global.module.css"
-import Bootstrap from "../../assets/skillImgs/technologies/bootstrap.png"
-import Chakraui from "../../assets/skillImgs/technologies/chakraui.png"
-import Contentful from "../../assets/skillImgs/technologies/contentful.png"
-import Materialui from "../../assets/skillImgs/technologies/materialui.png"
-import Nextjs from "../../assets/skillImgs/technologies/nextjs.png"
-import ReactIcon from "../../assets/skillImgs/technologies/react.png"
+import React from 'react'
+import { Box, Flex, Image, Spacer, Stack, useTheme } from '@chakra-ui/react'
+import styles from '../../styles/global.module.css'
+import Bootstrap from '../../assets/skillImgs/technologies/bootstrap.png'
+import Chakraui from '../../assets/skillImgs/technologies/chakraui.png'
+import Contentful from '../../assets/skillImgs/technologies/contentful.png'
+import Materialui from '../../assets/skillImgs/technologies/materialui.png'
+import Nextjs from '../../assets/skillImgs/technologies/nextjs.png'
+import ReactIcon from '../../assets/skillImgs/technologies/react.png'
 
 interface TechnologyTileProps {
   activeTheme: string;
@@ -35,12 +35,12 @@ const TechnologyTile: React.FC<TechnologyTileProps> = ({ activeTheme, onThemeSwi
     <Box className={styles.about} style={bodyStyle}>
       <Flex 
         style={backgroundStyle}
-        alignItems="left"
-        flexDirection="column" 
-        justifyContent="center" 
+        alignItems='left'
+        flexDirection='column' 
+        justifyContent='center' 
         gap={{ base: '15px', md: '30px' }}
         padding={{ base: '15px', md: '30px' }}
-        borderRadius="10px"
+        borderRadius='10px'
       >
         <h3 style={subHeadingStyle}>technologies</h3>
         <Stack direction='row'>

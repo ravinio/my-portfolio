@@ -1,6 +1,6 @@
-import React from "react";
-import { Button, useTheme } from "@chakra-ui/react"
-import { AiFillGithub } from 'react-icons/ai';
+import React from 'react'
+import { Button, useTheme } from '@chakra-ui/react'
+import { AiFillGithub } from 'react-icons/ai'
 
 interface GithubBtnProps {
   activeTheme: string;
@@ -16,7 +16,7 @@ const GithubBtn: React.FC<GithubBtnProps> = ({ activeTheme, onThemeSwitch }) => 
   };
 
   const handleClick = () => {
-    window.location.href = "https://github.com/ravinio";
+    window.location.href = 'https://github.com/ravinio'
   };
 
   return (

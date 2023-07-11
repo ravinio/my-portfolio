@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, Center, Flex, Image, Spacer, Stack, useTheme } from "@chakra-ui/react"
-import styles from "../../styles/global.module.css"
-import AWS from "../../assets/skillImgs/tools-and-softwares/aws.png"
-import Bitbucket from "../../assets/skillImgs/tools-and-softwares/bitbucket.png"
-import Figma from "../../assets/skillImgs/tools-and-softwares/figma.png"
-import Jira from "../../assets/skillImgs/tools-and-softwares/jira.png"
-import Photoshop from "../../assets/skillImgs/tools-and-softwares/photoshop.png"
-import Vscode from "../../assets/skillImgs/tools-and-softwares/vscode.png"
+import React from 'react'
+import { Box, Flex, Image, Spacer, Stack, useTheme } from '@chakra-ui/react'
+import styles from '../../styles/global.module.css'
+import AWS from '../../assets/skillImgs/tools-and-softwares/aws.png'
+import Bitbucket from '../../assets/skillImgs/tools-and-softwares/bitbucket.png'
+import Figma from '../../assets/skillImgs/tools-and-softwares/figma.png'
+import Jira from '../../assets/skillImgs/tools-and-softwares/jira.png'
+import Photoshop from '../../assets/skillImgs/tools-and-softwares/photoshop.png'
+import Vscode from '../../assets/skillImgs/tools-and-softwares/vscode.png'
 
 interface ToolsAndSoftwaresProps {
   activeTheme: string;
@@ -35,12 +35,12 @@ const ToolsAndSoftwaresTile: React.FC<ToolsAndSoftwaresProps> = ({ activeTheme, 
     <Box className={styles.about} style={bodyStyle}>
       <Flex 
         style={backgroundStyle}
-        alignItems="left"
-        flexDirection="column" 
-        justifyContent="center" 
+        alignItems='left'
+        flexDirection='column' 
+        justifyContent='center' 
         gap={{ base: '15px', md: '30px' }}
         padding={{ base: '15px', md: '30px' }}
-        borderRadius="10px"
+        borderRadius='10px'
       >
         <h3 style={subHeadingStyle}>tools & softwares</h3>
         <Stack direction='row'>

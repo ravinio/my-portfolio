@@ -1,8 +1,8 @@
-import React from "react";
-import { Center, Flex, useTheme } from "@chakra-ui/react"
-import LanguageTile from "../components/skillTiles/languageTile"
-import TechnologyTile from "../components/skillTiles/technologieTile"
-import ToolsAndSoftwaresTile from "../components/skillTiles/toolsAndSoftwaresTile"
+import React from 'react'
+import { Center, Flex, useTheme } from '@chakra-ui/react'
+import LanguageTile from '../components/skillTiles/languageTile'
+import TechnologyTile from '../components/skillTiles/technologieTile'
+import ToolsAndSoftwaresTile from '../components/skillTiles/toolsAndSoftwaresTile'
 
 interface SkillsProps {
   activeTheme: string;
@@ -20,12 +20,12 @@ const Skills: React.FC<SkillsProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h="auto" py="30px">
+    <Center h='auto' py='30px'>
       <Flex  
-        h="auto"
-        justifyContent="center"
+        h='auto'
+        justifyContent='center'
         gap={{ base: '15px', md: '30px' }} 
-        flexWrap="wrap"
+        flexWrap='wrap'
       >
         <LanguageTile activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         <TechnologyTile activeTheme={activeTheme} onThemeSwitch={switchTheme} />

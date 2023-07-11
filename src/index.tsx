@@ -1,16 +1,16 @@
-import { useState } from "react";
-import ReactDOM from "react-dom";
-import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react';
-import ThemeSwitcherButton from "./components/themeSwitcher";
-import Wrapper from "./pages/wrapper"
-import Picture1 from "./assets/bg/salazar.png";
-import Picture2 from "./assets/bg/wallace.png";
-import Picture3 from "./assets/bg/ichabod.png";
-import Picture4 from "./assets/bg/pemberly.png";
-import Picture5 from "./assets/bg/gengar.png";
+import { useState } from 'react'
+import ReactDOM from 'react-dom'
+import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import ThemeSwitcherButton from './components/themeSwitcher'
+import Wrapper from './pages/wrapper'
+import Picture1 from './assets/bg/salazar.png'
+import Picture2 from './assets/bg/wallace.png'
+import Picture3 from './assets/bg/ichabod.png'
+import Picture4 from './assets/bg/watney.png'
+import Picture5 from './assets/bg/gengar.png'
 
 const MyApp = () => {
-  const themes = ['salazar', 'wallace', 'ichabod', 'pemberly', 'gengar'];
+  const themes = ['salazar', 'wallace', 'ichabod', 'watney', 'gengar'];
   const [activeTheme, setActiveTheme] = useState(themes[0]);
 
   const switchTheme = (theme: string) => {
@@ -41,12 +41,12 @@ const MyApp = () => {
         body: 'Newsreader, serif',
         color: '#ff7518',
       },
-      pemberly: {
-        background: 'rgba(60, 131, 109, 0.80)',
+      watney: {
+        background: 'rgba(125, 121, 105, 0.60)',
         boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.24)',
-        heading: 'Petit Formal Script, cursive',
-        body: 'Aref Ruqaa Ink, serif',
-        color: '#eda19f',
+        heading: 'Expletus Sans, cursive',
+        body: 'Armata, sans-serif',
+        color: '#56e39f',
       },
       gengar: {
         background: 'rgba(197, 197, 208, 0.50)',
@@ -59,14 +59,14 @@ const MyApp = () => {
       salazar: Picture1,
       wallace: Picture2,
       ichabod: Picture3,
-      pemberly: Picture4,
+      watney: Picture4,
       gengar: Picture5,
     },
   });
 
   return (
     <ChakraProvider theme={customTheme}>
-      <ColorModeScript initialColorMode="light" />
+      <ColorModeScript initialColorMode='light' />
       <ThemeSwitcherButton themes={themes} onThemeSwitch={switchTheme} activeTheme={activeTheme} />
       <Wrapper activeTheme={activeTheme} onThemeSwitch={switchTheme} />
     </ChakraProvider>

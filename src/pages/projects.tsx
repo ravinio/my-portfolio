@@ -1,9 +1,9 @@
-import React from "react";
-import { Center, Flex, useTheme } from "@chakra-ui/react"
-import TimeOutAcres from "../components/projectTiles/timeOutAcres"
-import ChasingRavens from "../components/projectTiles/chasingravens"
-import TylerLeePhotography from "../components/projectTiles/tylerLeePhotography"
-import Escapay from "../components/projectTiles/escapay"
+import React from 'react'
+import { Center, Flex, useTheme } from '@chakra-ui/react'
+import TimeOutAcres from '../components/projectTiles/timeOutAcres'
+import ChasingRavens from '../components/projectTiles/chasingravens'
+import TylerLeePhotography from '../components/projectTiles/tylerLeePhotography'
+import Escapay from '../components/projectTiles/escapay'
 
 interface ProjectsProps {
   activeTheme: string;
@@ -23,11 +23,11 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
   return (
     <Center>
       <Flex  
-        h="auto"
-        py="30px"
-        justifyContent="center"
+        h='auto'
+        py='30px'
+        justifyContent='center'
         gap={{ base: '15px', md: '30px' }} 
-        flexWrap="wrap"
+        flexWrap='wrap'
       >       
         <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />

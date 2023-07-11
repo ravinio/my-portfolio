@@ -1,6 +1,6 @@
-import React from "react";
-import { Button, useTheme } from "@chakra-ui/react"
-import { FiFigma } from 'react-icons/fi';
+import React from 'react'
+import { Button, useTheme } from '@chakra-ui/react'
+import { FiFigma } from 'react-icons/fi'
 
 interface FigmaBtnProps {
   activeTheme: string;
@@ -16,7 +16,7 @@ const FigmaBtn: React.FC<FigmaBtnProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   const handleClick = () => {
-    window.location.href = "https://figma.com/@enjidev";
+    window.location.href = 'https://figma.com/@enjidev'
   };
 
   return (

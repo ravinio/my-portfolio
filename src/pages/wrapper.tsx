@@ -1,14 +1,14 @@
-import React from "react"
+import React from 'react'
 import {
   Box,
   useTheme
-} from "@chakra-ui/react"
-import TopNav from "../components/topNav"
-import Home from "./home"
-import About from "./about"
-import Skills from "./skills"
-import Projects from "./projects"
-import Contact from "./contact"
+} from '@chakra-ui/react'
+import TopNav from '../components/topNav'
+import Home from './home'
+import About from './about'
+import Skills from './skills'
+import Projects from './projects'
+import Contact from './contact'
 
 interface WrapperProps {
   activeTheme: string;
@@ -31,13 +31,17 @@ const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: theme.styles[activeTheme].backgroundPosition,
-    fontFamily: theme.styles[activeTheme].body
+    fontFamily: theme.styles[activeTheme].body,
+    '::selection': {
+      background: theme.styles[activeTheme].selectionBackground,
+      color: theme.styles[activeTheme].selectionColor,
+    }
   };
 
   return (
     <Box 
       style={backgroundStyle} 
-      minH="100vh"
+      minH='100vh'
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
     >
       <TopNav activeTheme={activeTheme} onThemeSwitch={switchTheme} />

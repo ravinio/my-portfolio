@@ -1,7 +1,7 @@
 /* ----- home page ----- */
 .myImage {
     border-radius: 500px 500px 0px 0px;
-    background-image: url("../assets/me/its-me.GIF");
+    background-image: url('../assets/me/its-me.GIF');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

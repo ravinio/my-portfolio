@@ -1,7 +1,6 @@
-import React from "react";
-import { Box, Button, Center, Flex, useTheme } from "@chakra-ui/react"
+import React from 'react'
+import { Button, useTheme } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons'
-import styles from "../styles/global.module.css"
 
 interface EmailBtnProps {
   activeTheme: string;
@@ -20,9 +19,9 @@ const EmailBtn: React.FC<EmailBtnProps> = ({ activeTheme, onThemeSwitch }) => {
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
-  const email = "ravin.noel.io@gmail.com";
-  const subject = "Job Opportunity Inquiry / Collaboration Inquiry / Project Inquiry";
-  const body = "Sick website bro! I am reaching out to discuss...";
+  const email = 'ravin.noel.io@gmail.com'
+  const subject = 'Job Opportunity Inquiry / Collaboration Inquiry / Project Inquiry'
+  const body = 'Sick website bro! I am reaching out to discuss...'
 
   return (
     <Button 

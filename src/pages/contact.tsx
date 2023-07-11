@@ -1,10 +1,10 @@
-import React from "react";
-import { Center, Flex, Spacer, useTheme } from "@chakra-ui/react"
-import styles from "../styles/global.module.css"
-import EmailBtn from "../components/contactBtns/emailBtn"
-import LinkedInBtn from "../components/contactBtns/linkedInBtn"
-import FigmaBtn from "../components/contactBtns/figmaBtn"
-import GithubBtn from "../components/contactBtns/githubBtn"
+import React from 'react'
+import { Center, Flex, Spacer, useTheme } from '@chakra-ui/react'
+import styles from '../styles/global.module.css'
+import EmailBtn from '../components/contactBtns/emailBtn'
+import LinkedInBtn from '../components/contactBtns/linkedInBtn'
+import FigmaBtn from '../components/contactBtns/figmaBtn'
+import GithubBtn from '../components/contactBtns/githubBtn'
 
 interface ContactProps {
   activeTheme: string;
@@ -37,23 +37,23 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h="100vh" className={styles.about}>
+    <Center h='100vh' className={styles.about}>
       <Flex 
         style={backgroundStyle}
         width={{ base: '100%', md: '768px' }}
-        alignItems="left"
-        flexDirection="column" 
-        justifyContent="center" 
+        alignItems='left'
+        flexDirection='column' 
+        justifyContent='center' 
         gap={{ base: '15px', md: '30px' }}
         padding={{ base: '15px', md: '30px' }}
-        borderRadius="10px"
+        borderRadius='10px'
       >
         <h3 style={subHeadingStyle}>get in touch</h3>
         <p style={bodyStyle}>
           If you have any inquiries, collaboration opportunities, or simply want to connect, I'd love to hear from you!
         </p>
         <Flex
-          w="100%"
+          w='100%'
           flexDirection={{ base: 'column', sm: 'row' }}
           gap={{ base: '6px', md: '0px' }}
           flexWrap='wrap'

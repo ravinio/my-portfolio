@@ -1,9 +1,7 @@
-import React from "react";
-import { Avatar, Box, Button, Card, CardBody, CardFooter, CardHeader, Center, Flex, Heading, IconButton, Image, Text, useTheme } from "@chakra-ui/react"
-import { BiLike, BiChat, BiShare } from "react-icons/bi"
-import styles from "../../styles/global.module.css"
-import MichaelIcon from "../../assets/projects/icons/michael.gif"
-import LebowskiImg from "../../assets/projects/imgs/lebowski.gif"
+import React from 'react'
+import { Avatar, Box, Card, CardBody, CardHeader, Flex, Image, Text, useTheme } from '@chakra-ui/react'
+import MichaelIcon from '../../assets/projects/icons/michael.gif'
+import LebowskiImg from '../../assets/projects/imgs/lebowski.gif'
 
 interface EscapayProps {
   activeTheme: string;
