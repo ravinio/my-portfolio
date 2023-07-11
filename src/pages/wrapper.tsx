@@ -7,6 +7,7 @@ import TopNav from "../components/topNav"
 import Home from "./home"
 import About from "./about"
 import Skills from "./skills"
+import Projects from "./projects"
 import Contact from "./contact"
 
 interface WrapperProps {
@@ -43,6 +44,7 @@ const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
       <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
      </Box>
   );

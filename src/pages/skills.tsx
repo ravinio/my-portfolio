@@ -20,7 +20,7 @@ const Skills: React.FC<SkillsProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h="100vh">
+    <Center h="auto" py="30px">
       <Flex  
         h="auto"
         justifyContent="center"
