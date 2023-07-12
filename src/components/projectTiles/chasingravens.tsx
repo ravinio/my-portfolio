@@ -1,6 +1,6 @@
 import React from 'react'
-import { Avatar, Box, Card, CardBody, CardHeader, Flex, Image, Text, useTheme } from '@chakra-ui/react'
-import MichaelIcon from '../../assets/projects/icons/michael.gif'
+import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
+import Icon from '../../assets/projects/icons/chasingraven.svg'
 import LebowskiImg from '../../assets/projects/imgs/lebowski.gif'
 
 interface ChasingRavensProps {
@@ -33,17 +33,24 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
       <CardHeader>
         <Flex>
           <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-            <Avatar name='Segun Adebayo' src={MichaelIcon} />
-    
-            <Box>
+            <Center
+              borderRadius='full'
+              backgroundColor='rgba(255,255,255)'
+              height='48px'
+              width='48px'
+              p='5px'
+            >
+              <Image src={Icon} />
+            </Center>   
+            <Link href='https://www.chasingravensblog.com/'>
               <h3 style={subHeadingStyle}>chasing ravens</h3>
-            </Box>
+            </Link>
           </Flex>
         </Flex>
       </CardHeader>
       <CardBody>
         <Text fontSize='14px'>
-          This website is a special gift I crafted for my current partner, showcasing my passion for both design and gastronomy. Meticulously handcrafted using the powerful combination of Contentful API, React, and SCSS, it has been transformed into a captivating food blog. 
+          This website created as a gift for my partner, showcasing our passion for both design and gastronomy. Meticulously handcrafted using the powerful combination of Contentful API, React, and SCSS, it has been transformed into a captivating food blog. 
           The site boasts an inviting home, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe that permeates every corner.
         </Text>
       </CardBody>

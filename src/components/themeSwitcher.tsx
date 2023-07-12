@@ -20,7 +20,7 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
   const buttonLabel = `${activeTheme.charAt(0).toLowerCase() + activeTheme.slice(1)}`;
 
   const buttonStyle = {
-    color: theme.styles[activeTheme].color,
+    color: theme.styles[activeTheme].navColor,
     fontFamily: theme.styles[activeTheme].body,
   };
 

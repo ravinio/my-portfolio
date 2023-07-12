@@ -11,7 +11,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
 
   const headingStyle = {
-    color: theme.styles[activeTheme].color,
+    color: theme.styles[activeTheme].titleColor,
     fontFamily: theme.styles[activeTheme].heading,
   };
 

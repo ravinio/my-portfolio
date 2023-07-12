@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center, Flex, useTheme } from '@chakra-ui/react'
+import { Center, Flex, Grid, GridItem, useTheme } from '@chakra-ui/react'
 import TimeOutAcres from '../components/projectTiles/timeOutAcres'
 import ChasingRavens from '../components/projectTiles/chasingravens'
 import TylerLeePhotography from '../components/projectTiles/tylerLeePhotography'
@@ -22,18 +22,26 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
 
   return (
     <Center>
-      <Flex  
+      <Grid  
         h='auto'
         py='30px'
         justifyContent='center'
         gap={{ base: '15px', md: '30px' }} 
         flexWrap='wrap'
-      >       
-        <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-        <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-        <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-        <Escapay activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      </Flex>
+      >     
+        <GridItem>       
+          <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+        </GridItem>  
+        <GridItem>
+          <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+        </GridItem>  
+        <GridItem>
+          <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+        </GridItem>  
+        <GridItem>
+          <Escapay activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+        </GridItem>  
+      </Grid>
     </Center>
   );
 };

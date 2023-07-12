@@ -1,6 +1,6 @@
 import React from 'react'
-import { Avatar, Box, Card, CardBody, CardHeader, Flex, Image, Text, useTheme } from '@chakra-ui/react'
-import MichaelIcon from '../../assets/projects/icons/michael.gif'
+import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
+import Icon from '../../assets/projects/icons/toa-purple-logo.png'
 import LebowskiImg from '../../assets/projects/imgs/lebowski.gif'
 
 interface TimeOutAcresProps {
@@ -33,11 +33,18 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch 
       <CardHeader>
         <Flex>
           <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-            <Avatar name='Segun Adebayo' src={MichaelIcon} />
-    
-            <Box>
+            <Center
+              borderRadius='full'
+              backgroundColor='rgba(255,255,255)'
+              height='48px'
+              width='48px'
+              p='5px'
+            >
+              <Image src={Icon} />
+            </Center>
+            <Link href='https://www.timeoutacres.com/'>
               <h3 style={subHeadingStyle}>time out acres</h3>
-            </Box>
+            </Link>
           </Flex>
         </Flex>
       </CardHeader>

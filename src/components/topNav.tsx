@@ -8,7 +8,7 @@ interface TopNavProps {
 
 const TopNav: React.FC<TopNavProps> = ({ activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
-  const fillColor = theme.styles[activeTheme]?.color || '#EDEDED'
+  const fillColor = theme.styles[activeTheme]?.navColor
 
   return (
     <Flex position='absolute' top='0' left='0' width='100%' padding='30px'>
