@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
 import Icon from '../../assets/projects/icons/cameralogo.png'
-import LebowskiImg from '../../assets/projects/imgs/lebowski.gif'
+import Gif from '../../assets/projects/gifs/tylerphotography.gif'
 
 interface TylerLeePhotographyProps {
   activeTheme: string;
@@ -24,7 +24,7 @@ const TylerLeePhotography: React.FC<TylerLeePhotographyProps> = ({ activeTheme, 
 
   return (
     <Card 
-      maxW={{ base: 'sm', md: 'md' }}  
+      // maxW={{ base: 'sm', md: 'md' }}  
       height='fit-content'
       overflow='hidden'
       borderRadius='10px'
@@ -57,7 +57,7 @@ const TylerLeePhotography: React.FC<TylerLeePhotographyProps> = ({ activeTheme, 
       </CardBody>
       <Image
         objectFit='cover'
-        src={LebowskiImg}
+        src={Gif}
       />
     </Card>
   );

@@ -26,3 +26,18 @@ h3 {
 p {
     font-size: calc(14px + (20 - 14) * ((100vw - 270px) / (1600 - 270)));
 }
+
+/* ----- nav drawer ----- */
+h4 {
+    
+}
+
+.navbar {
+    background: transparent;
+    transition-duration: .5s;
+}
+
+.navbarActive {
+    backdrop-filter: blur(5px);
+    transition-duration: .5s;
+}

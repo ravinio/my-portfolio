@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
-import ThemeSwitcherButton from './components/themeSwitcher'
 import Wrapper from './pages/wrapper'
 import Picture1 from './assets/bg/salazar.png'
 import Picture2 from './assets/bg/halliwell.png'
@@ -94,8 +93,7 @@ const MyApp = () => {
   return (
     <ChakraProvider theme={customTheme}>
       <ColorModeScript initialColorMode='light' />
-      <ThemeSwitcherButton themes={themes} onThemeSwitch={switchTheme} activeTheme={activeTheme} />
-      <Wrapper activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <Wrapper themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
     </ChakraProvider>
   );
 };

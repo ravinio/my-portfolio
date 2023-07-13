@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
 import Icon from '../../assets/projects/icons/chasingraven.svg'
-import LebowskiImg from '../../assets/projects/imgs/lebowski.gif'
+import Gif from '../../assets/projects/gifs/chasingravens.gif'
 
 interface ChasingRavensProps {
   activeTheme: string;
@@ -24,7 +24,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
 
   return (
     <Card 
-      maxW={{ base: 'sm', md: 'md' }}  
+      // maxW={{ base: 'sm', md: 'md' }}  
       height='fit-content'
       overflow='hidden'
       borderRadius='10px'
@@ -56,7 +56,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
       </CardBody>
       <Image
         objectFit='cover'
-        src={LebowskiImg}
+        src={Gif}
       />
     </Card>
   );

@@ -11,17 +11,18 @@ import Projects from './projects'
 import Contact from './contact'
 
 interface WrapperProps {
-  activeTheme: string;
+  themes: string[];
   onThemeSwitch: (theme: string) => void;
+  activeTheme: string;
 }
 
-const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
+const Wrapper: React.FC<WrapperProps> = ({ themes, onThemeSwitch, activeTheme }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
-    const themeIndex = theme.indexOf(activeTheme);
-    const nextThemeIndex = (themeIndex + 1) % theme.length;
-    const nextTheme = theme[nextThemeIndex];
+    const themeIndex = themes.indexOf(activeTheme);
+    const nextThemeIndex = (themeIndex + 1) % themes.length;
+    const nextTheme = themes[nextThemeIndex];
     onThemeSwitch(nextTheme);
   };
 
@@ -43,9 +44,9 @@ const Wrapper: React.FC<WrapperProps> = ({ onThemeSwitch, activeTheme }) => {
       style={backgroundStyle} 
       minH='100vh'
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
+      scrollBehavior='smooth'
     >
-      <TopNav activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <TopNav themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />      <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
       <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />

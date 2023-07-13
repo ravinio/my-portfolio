@@ -26,19 +26,21 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
         h='auto'
         py='30px'
         justifyContent='center'
-        gap={{ base: '15px', md: '30px' }} 
+        // gap={{ base: '15px', md: '30px' }} 
         flexWrap='wrap'
+        templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+        gap={6}
       >     
-        <GridItem>       
+        <GridItem w='100%'>       
           <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
-        <GridItem>
+        <GridItem w='100%'>
           <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
-        <GridItem>
+        <GridItem w='100%'>
           <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
-        <GridItem>
+        <GridItem w='100%'>
           <Escapay activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
       </Grid>
