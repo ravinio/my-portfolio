@@ -37,8 +37,8 @@ const MyApp = () => {
       halliwell: {
         background: 'rgba(117, 139, 253, 0.60)',
         backgroundPosition: 'top',
-        heading: 'Poppins, sans-serif',
-        body: 'Poppins, sans-serif',
+        heading: 'Philosopher, sans-serif',
+        body: 'Bellefair, serif',
         fill: '#758bfd',
         color: '#223343',
         navColor: '#758bfd',
@@ -58,7 +58,7 @@ const MyApp = () => {
       ichabod: {
         background: 'rgba(31, 30, 30, 0.80)',
         heading: 'Beth Ellen, cursive',
-        body: 'Newsreader, serif',
+        body: 'Gideon Roman, cursive',
         color: '#ff7518',
         navColor: '#1f1e1e',
         titleColor: '#ff7518'
