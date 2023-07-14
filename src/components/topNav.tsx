@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Box, Button, Center, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, MenuButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
+import { Box, Button, Center, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, MenuButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import styles from '../styles/global.module.css'
+import ReactDOM from 'react-dom'
 import ThemeSwitcherButton from '../components/themeSwitcher'
 
 interface TopNavProps {
