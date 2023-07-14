@@ -44,7 +44,7 @@ const TylerLeePhotography: React.FC<TylerLeePhotographyProps> = ({ activeTheme, 
             </Center>
 
             <Link href='https://tyler-lee-photography-ancu492mk-ravinio.vercel.app/'>
-              <h3 style={subHeadingStyle}>TL photography</h3>
+              <h3 style={subHeadingStyle}>tl photography</h3>
             </Link>
           </Flex>
         </Flex>

@@ -61,19 +61,19 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
     )
   }
 
-  const [navbar, setNavbar] = useState(false)
+  // const [navbar, setNavbar] = useState(false)
     
   // Change Color of Navbar    
-  const changeBackground = () => {
-      if(window.scrollY >= 100) {
-          setNavbar(true)
-      }
-      else {
-          setNavbar(false)
-      }
-  }
+  // const changeBackground = () => {
+  //     if(window.scrollY >= 100) {
+  //         setNavbar(true)
+  //     }
+  //     else {
+  //         setNavbar(false)
+  //     }
+  // }
 
-  window.addEventListener("scroll", changeBackground)
+  // window.addEventListener("scroll", changeBackground)
 
   //const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -89,7 +89,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         mx={{ base: '-15px', md: '-30px' }}
         alignItems='center'
         zIndex='100'
-        className={navbar ? styles.navbarActive : styles.navbar}
+        // className={navbar ? styles.navbarActive : styles.navbar}
       >
         <svg
           width='57px'
@@ -113,7 +113,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         <Spacer />
 
         <Center 
-          display={{ base: 'none', sm: 'flex' }}
+          display={{ base: 'none', md: 'flex' }}
           height='fit-content'
           color={navColor}
           gap='20px'
@@ -124,7 +124,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         <Spacer />
 
         <Box         
-          display={{ base: 'none', sm: 'flex' }}
+          display={{ base: 'none', md: 'flex' }}
         >
           <ThemeSwitcherButton
             themes={themes}
@@ -135,7 +135,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         
         {/* phone view */}
         <Flex
-          display={{ base: 'flex', sm: 'none' }}
+          display={{ base: 'flex', md: 'none' }}
         >
           <Button
             as={IconButton}

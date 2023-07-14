@@ -19,8 +19,20 @@ const Skills: React.FC<SkillsProps> = ({ activeTheme, onThemeSwitch }) => {
     onThemeSwitch(nextTheme);
   };
 
+  const sectionHeadingStyle = {
+    color: theme.styles[activeTheme].titleColor,
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   return (
-    <Center h='auto' py='30px' id='skills'>
+    <Center 
+      id='skills' 
+      h={{base: 'auto', md: '100vh'}} 
+      pb='100px' 
+      flexDirection='column' 
+      gap={{ base: '15px', md: '30px' }}
+    >
+      <h1 style={sectionHeadingStyle}>my skills</h1>
       <Flex  
         h='auto'
         justifyContent='center'

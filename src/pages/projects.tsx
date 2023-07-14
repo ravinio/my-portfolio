@@ -20,8 +20,19 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
     onThemeSwitch(nextTheme);
   };
 
+  const sectionHeadingStyle = {
+    color: theme.styles[activeTheme].titleColor,
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   return (
-    <Center id='projects'>
+    <Center 
+      id='projects' 
+      pt='100px'
+      flexDirection='column' 
+      gap={{ base: '15px', md: '30px' }}
+    >
+      <h1 style={sectionHeadingStyle}>my projects</h1>
       <Grid  
         h='auto'
         py='30px'
