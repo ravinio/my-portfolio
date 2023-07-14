@@ -19,10 +19,9 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
 
   const buttonLabel = `${activeTheme.charAt(0).toLowerCase() + activeTheme.slice(1)}`;
 
-  const buttonStyle = {
-    color: theme.styles[activeTheme].navColor,
-    fontFamily: theme.styles[activeTheme].body,
-  };
+  const navColor = theme.styles[activeTheme]?.navColor
+  const drawerColor = theme.styles[activeTheme]?.color
+  const bodyFont = theme.styles[activeTheme]?.body
 
   const buttonHoverStyle = {
     background: theme.styles[activeTheme].background,
@@ -33,7 +32,8 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
 
       <Button 
         onClick={switchTheme} 
-        style={buttonStyle} 
+        color={{base: drawerColor, sm: navColor}} 
+        fontFamily={bodyFont}
         variant='ghost'
         fontWeight='400'
         zIndex='100'

@@ -37,7 +37,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h='100vh' className={styles.about}>
+    <Center h='100vh' className={styles.about} id='contact'>
       <Flex 
         style={backgroundStyle}
         width={{ base: '100%', md: '768px' }}

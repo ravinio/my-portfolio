@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Box, Button, Center, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, MenuButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import styles from '../styles/global.module.css'
-import ReactDOM from 'react-dom'
 import ThemeSwitcherButton from '../components/themeSwitcher'
 
 interface TopNavProps {
@@ -25,6 +24,43 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
   const drawerColor = theme.styles[activeTheme]?.color
   const navDrawerBackground = theme.styles[activeTheme]?.background
 
+  const buttonHoverStyle = {
+    background: theme.styles[activeTheme].background,
+    boxShadow: theme.styles[activeTheme].boxShadow
+  };
+
+  const navLinks = ['home', 'about', 'skills', 'projects', 'contact']
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const renderNavLink = (content: string) => {
+
+    const scrollId = `${content.toLocaleLowerCase()}`
+    
+    const handleClickNav = () => {
+      onClose(); 
+      setTimeout(() => {
+        const targetElement = document.getElementById(scrollId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
+    };
+
+    return (
+      <ul key={content}>
+        <Button 
+          onClick={handleClickNav}
+          color={{ base: drawerColor, sm: navColor }}
+          variant='ghost'
+          fontWeight='400'
+          _hover={buttonHoverStyle}
+        >
+          {content}
+        </Button>
+      </ul>
+    )
+  }
+
   const [navbar, setNavbar] = useState(false)
     
   // Change Color of Navbar    
@@ -39,7 +75,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
 
   window.addEventListener("scroll", changeBackground)
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  //const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
@@ -82,10 +118,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
           color={navColor}
           gap='20px'
         >
-          <p>about</p>
-          <p>skills</p>
-          <p>projects</p>
-          <p>contact</p>
+          {navLinks.map(nav => renderNavLink(nav))}
         </Center>
 
         <Spacer />
@@ -136,12 +169,8 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
                   h='100%'
                   flexDirection='column'
                   gap='20px'
-                  color={drawerColor}
                 >
-                  <h3>about</h3>
-                  <h3>skills</h3>
-                  <h3>projects</h3>
-                  <h3>contact</h3>
+                  {navLinks.map(nav => renderNavLink(nav))}
                 </Center>
             </DrawerContent>
           </Drawer>

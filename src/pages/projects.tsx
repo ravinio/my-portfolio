@@ -21,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center>
+    <Center id='projects'>
       <Grid  
         h='auto'
         py='30px'

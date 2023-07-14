@@ -16,7 +16,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   return (
-    <Center h='100vh'>
+    <Center h='100vh' id='home'>
       <Flex alignItems='center' flexDirection='row' justifyContent='center' height='100vh' width='100vw'>
         <Box 
           className={styles.myImage}
