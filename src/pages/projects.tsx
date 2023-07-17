@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center, Flex, Grid, GridItem, useTheme } from '@chakra-ui/react'
+import { Center, Grid, GridItem, useTheme } from '@chakra-ui/react'
 import TimeOutAcres from '../components/projectTiles/timeOutAcres'
 import ChasingRavens from '../components/projectTiles/chasingravens'
 import TylerLeePhotography from '../components/projectTiles/tylerLeePhotography'

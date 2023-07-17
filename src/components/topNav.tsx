@@ -1,7 +1,6 @@
-import React, { useState } from "react"
-import { Box, Button, Center, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, MenuButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
+import React from "react"
+import { Box, Button, Center, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import styles from '../styles/global.module.css'
 import ThemeSwitcherButton from '../components/themeSwitcher'
 
 interface TopNavProps {
@@ -13,12 +12,12 @@ interface TopNavProps {
 const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
 
-  const switchTheme = () => {
-    const themeIndex = themes.indexOf(activeTheme);
-    const nextThemeIndex = (themeIndex + 1) % themes.length;
-    const nextTheme = themes[nextThemeIndex];
-    onThemeSwitch(nextTheme);
-  };
+  // const switchTheme = () => {
+  //   const themeIndex = themes.indexOf(activeTheme);
+  //   const nextThemeIndex = (themeIndex + 1) % themes.length;
+  //   const nextTheme = themes[nextThemeIndex];
+  //   onThemeSwitch(nextTheme);
+  // };
 
   const navColor = theme.styles[activeTheme]?.navColor
   const drawerColor = theme.styles[activeTheme]?.color

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Center, Flex, useTheme } from '@chakra-ui/react'
+import { Center, Flex, Link, useTheme } from '@chakra-ui/react'
 import styles from '../styles/global.module.css'
+import Resume from '../assets/resume/IoResume.pdf'
 
 interface AboutProps {
   activeTheme: string;
@@ -43,6 +44,17 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
           <br />
           <br />
           I enjoy making things look beautiful and engaging while maintaining functionality. Along side this, I specialize in working in collaborative environments to accomplish an all-encompassing goal. I provide value to this dynamic by designing product and web applications with practical implementations and then bringing those designs to life through code.
+          <br />
+          <br />
+          For more info, check out my resume{' '}
+            <Link
+              textDecor='underline' 
+              href={Resume}
+              isExternal
+            >
+                here
+            </Link>
+          .
         </p>
       </Flex>
     </Center>
