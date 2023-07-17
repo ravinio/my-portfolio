@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
+import { useSpring, a } from '@react-spring/web'
+import styles from '../../styles/global.module.css'
 import Icon from '../../assets/projects/icons/toa-purple-logo.png'
 import Gif from '../../assets/projects/gifs/toa.gif'
 
@@ -22,9 +24,15 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch 
     fontFamily: theme.styles[activeTheme].heading,
   };
 
+  const [flipped, set] = useState(false)
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
+
   return (
     <Card 
-      // maxW={{ base: 'sm', md: 'md' }}  
       height='fit-content'
       overflow='hidden'
       borderRadius='10px'
