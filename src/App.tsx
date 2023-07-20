@@ -3,7 +3,6 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
-import styles from './styles/global.module.css'
 import TopNav from './components/topNav'
 import Home from './pages/home'
 import About from './pages/about'
@@ -38,7 +37,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   return (
     <Box 
-      className={styles.home}
+      backgroundSize='cover'
       style={backgroundStyle} 
       minH='100vh'
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
