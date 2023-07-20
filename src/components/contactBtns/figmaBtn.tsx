@@ -16,7 +16,7 @@ const FigmaBtn: React.FC<FigmaBtnProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   const handleClick = () => {
-    window.location.href = 'https://figma.com/@enjidev'
+    window.location.href = 'https://figma.com/@ravinoel'
   };
 
   return (
@@ -28,7 +28,7 @@ const FigmaBtn: React.FC<FigmaBtnProps> = ({ activeTheme, onThemeSwitch }) => {
       leftIcon={<FiFigma />}
       onClick={handleClick}
     >
-      /@ravin2
+      /@ravinoel
     </Button>
   );
 };

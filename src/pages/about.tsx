@@ -76,7 +76,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
             Hello, welcome to my website! To start off, I like to describe myself as a UI/UX Designer in a Front-End developer’s body.
             <br />
             <br />
-            I enjoy making things look beautiful and engaging while maintaining functionality. Along side this, I specialize in working in collaborative environments to accomplish an all-encompassing goal. I provide value to this dynamic by designing product and web applications with practical implementations and then bringing those designs to life through code.
+            I enjoy making things look beautiful and engaging while maintaining functionality. Alongside this, I specialize in working in collaborative environments to accomplish an all-encompassing goal. I provide value to this dynamic by designing product and web applications with practical implementations and then bringing those designs to life through code.
             <br />
             <br />
             For more info, check out my resume{' '}
