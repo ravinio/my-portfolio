@@ -3,7 +3,7 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
-import styles from '../styles/global.module.css'
+import styles from './styles/global.module.css'
 import TopNav from './components/topNav'
 import Home from './pages/home'
 import About from './pages/about'
