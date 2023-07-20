@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
 import App from './App'
-import Picture1 from './assets/bg/salazar.png'
-import Picture2 from './assets/bg/halliwell.png'
-import Picture3 from './assets/bg/wallace.png'
-import Picture4 from './assets/bg/ichabod.png'
-import Picture5 from './assets/bg/watney.png'
-import Picture6 from './assets/bg/gengar.png'
+import Picture1 from './assets/bg/salazar.webp'
+import Picture2 from './assets/bg/halliwell.webp'
+import Picture3 from './assets/bg/wallace.webp'
+import Picture4 from './assets/bg/ichabod.webp'
+import Picture5 from './assets/bg/watney.webp'
+import Picture6 from './assets/bg/gengar.webp'
 
 const MyApp = () => {
   const themes = ['salazar', 'halliwell', 'wallace', 'ichabod', 'watney', 'gengar'];
