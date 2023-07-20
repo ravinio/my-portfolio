@@ -28,6 +28,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   const backgroundStyle = {
     width: '100vw',
+    height:'auto',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
@@ -37,7 +38,6 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   return (
     <Box 
-      backgroundSize='cover'
       style={backgroundStyle} 
       minH='100vh'
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
