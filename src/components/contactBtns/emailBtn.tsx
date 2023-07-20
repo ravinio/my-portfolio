@@ -28,6 +28,7 @@ const EmailBtn: React.FC<EmailBtnProps> = ({ activeTheme, onThemeSwitch }) => {
         style={bodyStyle} 
         variant='outline'
         borderRadius='30px'
+        fontSize='sm'
         leftIcon={<EmailIcon />}
         onClick={handleClick}
     >

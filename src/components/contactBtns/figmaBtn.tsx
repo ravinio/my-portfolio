@@ -24,6 +24,7 @@ const FigmaBtn: React.FC<FigmaBtnProps> = ({ activeTheme, onThemeSwitch }) => {
       style={bodyStyle} 
       variant='outline'
       borderRadius='30px'
+      fontSize='sm'
       leftIcon={<FiFigma />}
       onClick={handleClick}
     >

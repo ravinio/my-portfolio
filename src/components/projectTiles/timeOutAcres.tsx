@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
-import { useSpring, a } from '@react-spring/web'
-import styles from '../../styles/global.module.css'
+import { useSpring, animated, config } from '@react-spring/web'
 import Icon from '../../assets/projects/icons/toa-purple-logo.png'
 import Gif from '../../assets/projects/gifs/toa.gif'
 
@@ -24,49 +23,74 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch 
     fontFamily: theme.styles[activeTheme].heading,
   };
 
-  const [flipped, set] = useState(false)
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  })
+  const [boxInView, setBoxInView] = useState(false);
+  const boxRef = useRef(null);
+
+  const boxAnimation = useSpring({
+    from: { opacity: 0, transform: 'scale(0.5)' },
+    to: { opacity: boxInView ? 1 : 0, transform: boxInView ? 'scale(1)' : 'scale(0.5)' },
+    config: config.molasses,
+  });
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2, // Adjust the threshold as needed (0.2 means 20% visible)
+    };
+
+    const boxObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setBoxInView(true);
+      }
+    }, observerOptions);
+
+    if (boxRef.current) {
+      boxObserver.observe(boxRef.current);
+    }
+
+    // Clean up the observers when the component unmounts
+    return () => {
+      boxObserver.disconnect();
+    };
+  }, []);
 
   return (
-    <Card 
-      height='fit-content'
-      overflow='hidden'
-      borderRadius='10px'
-      style={backgroundStyle}
-    >
-      <CardHeader>
-        <Flex>
-          <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-            <Center
-              borderRadius='full'
-              backgroundColor='rgba(255,255,255)'
-              height='48px'
-              width='48px'
-              p='5px'
-            >
-              <Image src={Icon} />
-            </Center>
-            <Link href='https://www.timeoutacres.com/'>
-              <h3 style={subHeadingStyle}>time out acres</h3>
-            </Link>
+    <animated.div ref={boxRef} style={boxAnimation}>
+      <Card 
+        height='fit-content'
+        overflow='hidden'
+        borderRadius='10px'
+        style={backgroundStyle}
+      >
+        <CardHeader>
+          <Flex>
+            <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
+              <Center
+                borderRadius='full'
+                backgroundColor='rgba(255,255,255)'
+                height='48px'
+                width='48px'
+                p='5px'
+              >
+                <Image src={Icon} />
+              </Center>
+              <Link href='https://www.timeoutacres.com/'>
+                <h3 style={subHeadingStyle}>time out acres</h3>
+              </Link>
+            </Flex>
           </Flex>
-        </Flex>
-      </CardHeader>
-      <CardBody>
-        <Text fontSize='14px'>
-          This website was built for a local client that boards and trains dogs. As they embarked on their online journey, they entrusted me with the task of not only establishing their web presence but also revitalizing their entire brand identity.
-          This dynamic website seamlessly integrates engaging YouTube videos, offering valuable insights into their services. Additionally, a user-friendly contact form empowers prospective clients to effortlessly reach out and inquire about the exceptional offerings available.
-        </Text>
-      </CardBody>
-      <Image
-        objectFit='cover'
-        src={Gif}
-      />
-    </Card>
+        </CardHeader>
+        <CardBody>
+          <Text fontSize='14px'>
+            This website was built for a local client that boards and trains dogs. As they embarked on their online journey, they entrusted me with the task of not only establishing their web presence but also revitalizing their entire brand identity.
+            This dynamic website seamlessly integrates engaging YouTube videos, offering valuable insights into their services. Additionally, a user-friendly contact form empowers prospective clients to effortlessly reach out and inquire about the exceptional offerings available.
+          </Text>
+        </CardBody>
+        <Image
+          objectFit='cover'
+          src={Gif}
+        />
+      </Card>
+    </animated.div>
   );
 };
 

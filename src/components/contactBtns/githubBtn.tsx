@@ -24,6 +24,7 @@ const GithubBtn: React.FC<GithubBtnProps> = ({ activeTheme, onThemeSwitch }) => 
       style={bodyStyle} 
       variant='outline'
       borderRadius='30px'
+      fontSize='sm'
       leftIcon={<AiFillGithub />}
       onClick={handleClick}
     >

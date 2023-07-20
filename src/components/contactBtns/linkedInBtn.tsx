@@ -24,6 +24,7 @@ const LinkedInBtn: React.FC<LinkedInBtnProps> = ({ activeTheme, onThemeSwitch })
       style={bodyStyle} 
       variant='outline'
       borderRadius='30px'
+      fontSize='sm'
       leftIcon={<FaLinkedinIn />}
       onClick={handleClick}
     >
