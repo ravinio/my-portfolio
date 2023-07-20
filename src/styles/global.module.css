@@ -1,4 +1,8 @@
 /* ----- home page ----- */
+.home {
+    background-size: cover !important;
+}
+
 .myImage {
     border-radius: 500px 500px 0px 0px;
     background-image: url('../assets/me/its-me.GIF');
