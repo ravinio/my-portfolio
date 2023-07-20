@@ -39,7 +39,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2, // Adjust the threshold as needed (0.2 means 20% visible)
+      threshold: 0.2,
     };
 
     const boxObserver = new IntersectionObserver((entries) => {
@@ -52,7 +52,6 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
       boxObserver.observe(boxRef.current);
     }
 
-    // Clean up the observers when the component unmounts
     return () => {
       boxObserver.disconnect();
     };
@@ -86,7 +85,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
                 href={Resume}
                 isExternal
               >
-                  here
+                here
               </Link>
             .
           </p>

@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
-import Wrapper from './pages/wrapper'
+import App from './App'
 import Picture1 from './assets/bg/salazar.png'
 import Picture2 from './assets/bg/halliwell.png'
 import Picture3 from './assets/bg/wallace.png'
@@ -11,11 +11,18 @@ import Picture6 from './assets/bg/gengar.png'
 
 const MyApp = () => {
   const themes = ['salazar', 'halliwell', 'wallace', 'ichabod', 'watney', 'gengar'];
-  const [activeTheme, setActiveTheme] = useState(themes[0]);
+  const [activeTheme, setActiveTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('activeTheme');
+    return savedTheme && themes.includes(savedTheme) ? savedTheme : themes[0];
+  });
 
   const switchTheme = (theme: string) => {
     setActiveTheme(theme);
   };
+
+  useEffect(() => {
+    localStorage.setItem('activeTheme', activeTheme);
+  }, [activeTheme]);
 
   const customTheme = extendTheme({
     styles: {
@@ -31,7 +38,7 @@ const MyApp = () => {
         fill: '#cad2c5',
         color: '#cad2c5',
         navColor: '#cad2c5',
-        titleColor: '#cad2c5'
+        titleColor: '#cad2c5',
       },
       halliwell: {
         background: 'rgba(117, 139, 253, 0.60)',
@@ -92,8 +99,8 @@ const MyApp = () => {
 
   return (
     <ChakraProvider theme={customTheme}>
-      <ColorModeScript initialColorMode='light' />
-      <Wrapper themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <ColorModeScript initialColorMode='dark' />
+      <App themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
     </ChakraProvider>
   );
 };

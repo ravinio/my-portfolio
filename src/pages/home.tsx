@@ -57,7 +57,6 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch }) => {
           className={styles.myImage}
           width={{ base: '70vw', sm: '35vw' }}
           height={{ base: '60vh', md: '80vh'}}
-          // m={{ base: '15px', md: '0' }}
         ></Box>
         </animated.div>
 

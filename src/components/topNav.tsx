@@ -26,7 +26,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
 
   useEffect(() => {
     const handleScroll = () => {
-      setRotation(prevRotation => prevRotation + .9); // Increment the rotation by 5 degrees on each scroll
+      setRotation(prevRotation => prevRotation + .9);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,7 +37,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
   }, []);
 
   const logoAnimation = useSpring({
-    transform: `rotate(${rotation}deg)`, // Use the updated rotation value
+    transform: `rotate(${rotation}deg)`,
     config: { tension: 200, friction: 20 },
   });
 
@@ -86,7 +86,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         alignItems='center'
         zIndex='100'
       >
-        <animated.div style={logoAnimation}> {/* Use animated.div to apply the animation */}
+        <animated.div style={logoAnimation}>
           <svg
             width='57px'
             height='57px'

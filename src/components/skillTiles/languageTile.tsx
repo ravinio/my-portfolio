@@ -41,7 +41,7 @@ const LanguageTile: React.FC<LanguageTileProps> = ({ activeTheme, onThemeSwitch 
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2, // Adjust the threshold as needed (0.2 means 20% visible)
+      threshold: 0.2,
     };
 
     const boxObserver = new IntersectionObserver((entries) => {
@@ -54,7 +54,6 @@ const LanguageTile: React.FC<LanguageTileProps> = ({ activeTheme, onThemeSwitch 
       boxObserver.observe(boxRef.current);
     }
 
-    // Clean up the observers when the component unmounts
     return () => {
       boxObserver.disconnect();
     };

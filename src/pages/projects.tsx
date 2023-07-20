@@ -37,7 +37,6 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
         h='auto'
         py='30px'
         justifyContent='center'
-        // gap={{ base: '15px', md: '30px' }} 
         flexWrap='wrap'
         templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
         gap={6}
