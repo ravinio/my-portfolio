@@ -13,6 +13,7 @@ interface TopNavProps {
 const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
 
+  const navFont = theme.styles[activeTheme].body
   const navColor = theme.styles[activeTheme]?.navColor
   const drawerColor = theme.styles[activeTheme]?.color
   const navDrawerBackground = theme.styles[activeTheme]?.background
@@ -22,24 +23,24 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
     boxShadow: theme.styles[activeTheme].boxShadow
   };
 
-  const [rotation, setRotation] = useState(0);
+  // const [rotation, setRotation] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setRotation(prevRotation => prevRotation + .9);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setRotation(prevRotation => prevRotation + .9);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
-  const logoAnimation = useSpring({
-    transform: `rotate(${rotation}deg)`,
-    config: { tension: 200, friction: 20 },
-  });
+  // const logoAnimation = useSpring({
+  //   transform: `rotate(${rotation}deg)`,
+  //   config: { tension: 200, friction: 20 },
+  // });
 
   const navLinks = ['home', 'about', 'skills', 'projects', 'contact']
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,7 +63,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
       <ul key={content}>
         <Button 
           onClick={handleClickNav}
-          color={{ base: drawerColor, sm: navColor }}
+          color={{ base: drawerColor, md: navColor }}
           variant='ghost'
           fontWeight='400'
           _hover={buttonHoverStyle}
@@ -86,26 +87,24 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
         alignItems='center'
         zIndex='100'
       >
-        <animated.div style={logoAnimation}>
-          <svg
-            width='57px'
-            height='57px'
-            viewBox='0 0 400 400'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              d='M216 154.5C216 188.466 188.466 216 154.5 216C120.534 216 93 188.466 93 154.5C93 120.534 120.534 93 154.5 93C188.466 93 216 120.534 216 154.5Z'
-              fill={navColor}
-            />
-            <path
-              fillRule='evenodd'
-              clipRule='evenodd'
-              d='M400 200C400 310.457 310.457 400 200 400C89.5431 400 0 310.457 0 200C0 151.757 17.0812 107.503 45.5257 72.9568C28.857 95.4721 19 123.335 19 153.5C19 228.335 79.6654 289 154.5 289C229.335 289 290 228.335 290 153.5C290 78.6654 229.335 18 154.5 18C125.39 18 98.4241 27.1795 76.3389 42.8017C110.37 15.9942 153.317 0 200 0C310.457 0 400 89.5431 400 200ZM301 316C320.33 316 336 305.703 336 293C336 280.297 320.33 270 301 270C281.67 270 266 280.297 266 293C266 305.703 281.67 316 301 316Z'
-              fill={navColor}
-            />
-          </svg>
-        </animated.div>
+        <svg
+          width='57px'
+          height='57px'
+          viewBox='0 0 400 400'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M216 154.5C216 188.466 188.466 216 154.5 216C120.534 216 93 188.466 93 154.5C93 120.534 120.534 93 154.5 93C188.466 93 216 120.534 216 154.5Z'
+            fill={navColor}
+          />
+          <path
+            fillRule='evenodd'
+            clipRule='evenodd'
+            d='M400 200C400 310.457 310.457 400 200 400C89.5431 400 0 310.457 0 200C0 151.757 17.0812 107.503 45.5257 72.9568C28.857 95.4721 19 123.335 19 153.5C19 228.335 79.6654 289 154.5 289C229.335 289 290 228.335 290 153.5C290 78.6654 229.335 18 154.5 18C125.39 18 98.4241 27.1795 76.3389 42.8017C110.37 15.9942 153.317 0 200 0C310.457 0 400 89.5431 400 200ZM301 316C320.33 316 336 305.703 336 293C336 280.297 320.33 270 301 270C281.67 270 266 280.297 266 293C266 305.703 281.67 316 301 316Z'
+            fill={navColor}
+          />
+        </svg>
 
         <Spacer />
 
@@ -166,6 +165,7 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
                   h='100%'
                   flexDirection='column'
                   gap='20px'
+                  fontFamily={navFont}
                 >
                   {navLinks.map(nav => renderNavLink(nav))}
                 </Center>

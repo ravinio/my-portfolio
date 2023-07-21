@@ -29,7 +29,7 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
   return (
     <Button
       onClick={switchTheme}
-      color={{ base: drawerColor, sm: navColor }}
+      color={{ base: drawerColor, md: navColor }}
       fontFamily={bodyFont}
       variant="ghost"
       fontWeight="400"
