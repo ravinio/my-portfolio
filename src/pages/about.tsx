@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Center, Flex, Link, useTheme } from '@chakra-ui/react'
 import { useSpring, animated, config } from '@react-spring/web'
-import styles from '../styles/global.module.css'
 import Resume from '../assets/resume/IoResume.pdf'
 
 interface AboutProps {

@@ -3,6 +3,7 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
+import styles from './styles/global.module.css'
 import Wrapper from './pages/wrapper'
 
 interface AppProps {
@@ -23,10 +24,10 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   const backgroundStyle = {
     width: '100%',
-    height:'100vh',
+    height:'100%',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
+    backgroundAttachment: 'scroll',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: theme.styles[activeTheme].backgroundPosition,
     fontFamily: theme.styles[activeTheme].body,
@@ -34,7 +35,8 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   return (
     <Box 
-      // style={backgroundStyle} 
+      style={backgroundStyle} 
+      className={styles.backgroundApp}
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
       scrollBehavior='smooth'
     >

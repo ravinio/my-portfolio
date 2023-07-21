@@ -1,6 +1,20 @@
-body {
-    height: 100vh;
-}
+.backgroundApp {
+    background-attachment: fixed; /* Default to scroll */
+  }
+  
+  /* Apply fixed attachment only on devices that support it */
+  @supports (position: -webkit-sticky) or (position: sticky) {
+    .backgroundApp {
+      background-attachment: fixed;
+    }
+  }
+  
+  /* Additional media query for tablets and mobiles in landscape mode */
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .backgroundApp {
+      background-attachment: fixed;
+    }
+  }
 
 /* ----- home page ----- */
 .myImage {
