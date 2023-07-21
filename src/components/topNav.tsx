@@ -23,25 +23,6 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch }) =
     boxShadow: theme.styles[activeTheme].boxShadow
   };
 
-  // const [rotation, setRotation] = useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setRotation(prevRotation => prevRotation + .9);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-  // const logoAnimation = useSpring({
-  //   transform: `rotate(${rotation}deg)`,
-  //   config: { tension: 200, friction: 20 },
-  // });
-
   const navLinks = ['home', 'about', 'skills', 'projects', 'contact']
   const { isOpen, onOpen, onClose } = useDisclosure();
 

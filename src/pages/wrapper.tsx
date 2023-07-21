@@ -48,23 +48,23 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
           pages={6} 
           style={{ top: '0', left: '0', height: '100vh', width: '100%' }}
         > 
-          <ParallaxLayer offset={0} >
+          <ParallaxLayer offset={0} speed={0}>
             <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={1} speed={1}>
+          <ParallaxLayer offset={1} speed={0}>
             <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={1.9} speed={.5}>
+          <ParallaxLayer offset={2} speed={0}>
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={2.9} speed={.5}>
+          <ParallaxLayer offset={3} speed={0}>
             <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={5} speed={.5}>
+          <ParallaxLayer offset={5} speed={0}>
             <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
         </Parallax>
