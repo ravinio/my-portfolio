@@ -1,10 +1,11 @@
-body {
-    background: transparent;
-}
-
-.backgroundFixed {
-    background-attachment: fixed !important;
-}
+/* ----- wrapper ----- */
+@media only screen and (max-width: 768px) {
+    .background {
+        background-size: cover;
+        background-attachment: scroll;
+        background-repeat: repeat;   
+    }
+  }
 
 /* ----- home page ----- */
 .myImage {

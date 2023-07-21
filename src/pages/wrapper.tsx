@@ -3,6 +3,7 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
+import styles from '../styles/global.module.css'
 import TopNav from '../components/topNav'
 import Home from '../pages/home'
 import About from '../pages/about'
@@ -26,7 +27,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
     onThemeSwitch(nextTheme);
   };
 
-  const backgroundStyle = {
+  const backgroundStyleDesktop = {
     width: '100%',
     height:'100%',
     backgroundImage: `url(${theme.images[activeTheme]})`,
@@ -39,7 +40,8 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   return (
     <Box
-      style={backgroundStyle} 
+      style={backgroundStyleDesktop}
+      className={styles.background}
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
       scrollBehavior='smooth'
     >
