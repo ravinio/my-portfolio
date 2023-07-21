@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Box, Button, Center, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, IconButton, Spacer, useDisclosure, useTheme } from '@chakra-ui/react'
-import { useSpring, animated } from '@react-spring/web'; 
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeSwitcherButton from '../components/themeSwitcher'
 
