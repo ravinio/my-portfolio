@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Center, Flex, Spacer, useTheme } from '@chakra-ui/react'
+import { Center, Flex, Link, Spacer, Text, useTheme } from '@chakra-ui/react'
 import { useSpring, animated } from '@react-spring/web'
 import styles from '../styles/global.module.css'
 import EmailBtn from '../components/contactBtns/emailBtn'
@@ -106,6 +106,17 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
             <Spacer />
             <GithubBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </Flex>
+          <Text fontSize='xs' color='#fff'>
+            Check out the figma file I used to design this website{' '}
+                <Link
+                textDecor='underline' 
+                href='https://www.figma.com/file/ghXqRDpx0wdnb22gE7GkKW/stuff?type=design&node-id=106%3A654&mode=design&t=wKy0QbeVRTqP8Ixq-1'
+                isExternal
+                >
+                here
+                </Link>
+            .
+          </Text>
         </Flex>
       </animated.div>
     </Center>
