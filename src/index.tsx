@@ -28,7 +28,9 @@ const MyApp = () => {
     styles: {
       global: {
         body: {
-          bg: '#000'
+          backgroundImage: Picture1,
+          backgroundRepeat: 'no-reapeat',
+          backgroundAttachment: 'fixed'
         },
       },
       salazar: {

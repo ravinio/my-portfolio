@@ -1,3 +1,7 @@
+body {
+    background: transparent;
+}
+
 .backgroundFixed {
     background-attachment: fixed !important;
 }
