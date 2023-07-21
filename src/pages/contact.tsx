@@ -106,7 +106,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
             <Spacer />
             <GithubBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </Flex>
-          <Text fontSize='xs' color='#fff'>
+          <Text fontSize='xs' style={bodyStyle}>
             Check out the figma file I used to design this website{' '}
                 <Link
                 textDecor='underline' 
