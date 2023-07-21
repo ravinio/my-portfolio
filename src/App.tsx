@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Box,
   useTheme
@@ -22,6 +22,23 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
     onThemeSwitch(nextTheme);
   };
 
+  const applyFixedBackground = () => {
+    const ua = navigator.userAgent;
+    const isIOS = /iPad|iPhone|iPod/.test(ua);
+
+    if (isIOS) {
+      // Apply background-attachment: scroll on iOS devices
+      const container = document.getElementById('app-container');
+      if (container) {
+        container.classList.add('ios-background-scroll');
+      }
+    }
+  };
+
+  useEffect(() => {
+    applyFixedBackground();
+  }, []);
+
   const backgroundStyle = {
     width: '100%',
     height:'100%',
@@ -35,13 +52,13 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   return (
     <Box 
+      id="app-container"
       style={backgroundStyle} 
-      className={styles.backgroundApp}
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
       scrollBehavior='smooth'
     >
       <Wrapper themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-     </Box>
+    </Box>
   );
 };
 
