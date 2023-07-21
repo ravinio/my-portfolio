@@ -28,7 +28,7 @@ const Skills: React.FC<SkillsProps> = ({ activeTheme, onThemeSwitch }) => {
     <Center 
       id='skills' 
       h='auto' 
-      my='100px' 
+      // my='100px' 
       flexDirection='column' 
       gap={{ base: '15px', md: '30px' }}
     >

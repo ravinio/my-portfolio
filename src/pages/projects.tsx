@@ -28,7 +28,8 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
   return (
     <Center 
       id='projects' 
-      // pt='100px'
+      // my='100px'
+      h='auto' 
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}    
       flexDirection='column' 
       gap={{ base: '15px', md: '30px' }}

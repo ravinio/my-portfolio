@@ -45,7 +45,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
         <TopNav themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
 
         <Parallax 
-          pages={6} 
+          pages={8} 
           style={{ top: '0', left: '0', height: '100vh', width: '100%' }}
         > 
           <ParallaxLayer offset={0} speed={0}>
@@ -60,11 +60,11 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={3} speed={0}>
+          <ParallaxLayer offset={3.5} speed={0}>
             <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={5} speed={0}>
+          <ParallaxLayer offset={7} speed={0}>
             <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
         </Parallax>
