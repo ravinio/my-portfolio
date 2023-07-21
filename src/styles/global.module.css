@@ -1,13 +1,3 @@
-/* ----- wrapper ----- */
-@media only screen and (max-width: 768px) {
-    .background {
-        height: 100vh;
-        background-size: cover;
-        background-attachment: scroll;
-        background-repeat: repeat;   
-    }
-  }
-
 /* ----- home page ----- */
 .myImage {
     border-radius: 500px 500px 0px 0px;

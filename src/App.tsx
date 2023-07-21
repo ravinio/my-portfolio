@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  Box,
-  useTheme
-} from '@chakra-ui/react'
-import styles from './styles/global.module.css'
+import { useTheme } from '@chakra-ui/react'
 import Wrapper from './pages/wrapper'
 
 interface AppProps {
@@ -13,8 +9,6 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
-  const theme = useTheme();
-
   const switchTheme = () => {
     const themeIndex = themes.indexOf(activeTheme);
     const nextThemeIndex = (themeIndex + 1) % themes.length;
@@ -22,26 +16,8 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
     onThemeSwitch(nextTheme);
   };
 
-  // const backgroundStyle = {
-  //   width: '100%',
-  //   height:'100vh',
-  //   backgroundImage: `url(${theme.images[activeTheme]})`,
-  //   backgroundSize: 'cover',
-  //   backgroundAttachment: 'fixed',
-  //   backgroundRepeat: 'no-repeat',
-  //   backgroundPosition: theme.styles[activeTheme].backgroundPosition,
-  //   fontFamily: theme.styles[activeTheme].body,
-  // };
-
   return (
-    <Box 
-      //className={styles.backgroundFixed}
-      //style={backgroundStyle} 
-      // p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
-      // scrollBehavior='smooth'
-    >
       <Wrapper themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-    </Box>
   );
 };
 
