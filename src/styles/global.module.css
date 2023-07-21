@@ -1,19 +1,16 @@
-.backgroundApp {
-    background-attachment: fixed; /* Default to scroll */
-  }
-  
-  /* Apply fixed attachment only on devices that support it */
-  @supports (position: -webkit-sticky) or (position: sticky) {
-    .backgroundApp {
-      background-attachment: fixed;
-    }
-  }
-  
-  /* Additional media query for tablets and mobiles in landscape mode */
-  @media (max-width: 1024px) and (orientation: landscape) {
-    .backgroundApp {
-      background-attachment: fixed;
-    }
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
 /* ----- home page ----- */
