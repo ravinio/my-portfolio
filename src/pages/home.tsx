@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch }) => {
     <Center 
       h='100vh'
       position='relative'
-      top='-87px'
+      // top='-87px'
       id='home'
     >
       <Flex 

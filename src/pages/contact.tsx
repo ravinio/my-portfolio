@@ -71,7 +71,12 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
   }, []);
 
   return (
-    <Center h='100vh' className={styles.about} id='contact'>
+    <Center 
+      h='100vh'
+      p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}    
+      className={styles.about}
+      id='contact'
+    >
       <animated.div ref={boxRef} style={boxAnimation}>
         <Flex 
           style={backgroundStyle}

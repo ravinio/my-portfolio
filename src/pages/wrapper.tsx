@@ -3,6 +3,7 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import styles from '../styles/global.module.css'
 import TopNav from '../components/topNav'
 import Home from '../pages/home'
@@ -27,31 +28,49 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
     onThemeSwitch(nextTheme);
   };
 
-  const backgroundStyleDesktop = {
-    width: '100%',
-    height:'100%',
+  const backgroundStyle = {
+    // width: '100%',
+    height:'100vh',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
+    //backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: theme.styles[activeTheme].backgroundPosition,
+    //backgroundPosition: theme.styles[activeTheme].backgroundPosition,
     fontFamily: theme.styles[activeTheme].body,
   };
 
   return (
-    <Box
-      style={backgroundStyleDesktop}
-      className={styles.background}
-      p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
-      scrollBehavior='smooth'
-    >
-      <TopNav themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />      
-      <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-      <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-     </Box>
+      <Box
+        style={backgroundStyle}
+        scrollBehavior='smooth'
+      >
+        <TopNav themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+
+        <Parallax 
+          pages={7} 
+          style={{ top: '0', left: '0', height: '100vh', width: '100%' }}
+        > 
+          <ParallaxLayer offset={0} >
+            <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          </ParallaxLayer>
+          
+          <ParallaxLayer offset={1} speed={.5}>
+            <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          </ParallaxLayer>
+          
+          <ParallaxLayer offset={2} speed={1.3}>
+            <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          </ParallaxLayer>
+          
+          <ParallaxLayer offset={3} speed={.5}>
+            <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          </ParallaxLayer>
+          
+          <ParallaxLayer offset={6} speed={.5}>
+            <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          </ParallaxLayer>
+        </Parallax>
+      </Box>
   );
 };
 
