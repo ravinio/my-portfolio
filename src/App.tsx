@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTheme } from '@chakra-ui/react'
 import Wrapper from './pages/wrapper'
 
 interface AppProps {
