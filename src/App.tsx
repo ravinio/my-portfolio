@@ -28,7 +28,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   const backgroundStyle = {
     width: '100vw',
-    height:'auto',
+    height:'100%',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
