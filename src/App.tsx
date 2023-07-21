@@ -23,17 +23,18 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
 
   const backgroundStyle = {
     width: '100%',
-    height:'auto',
+    height:'100vh',
     backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
     backgroundPosition: theme.styles[activeTheme].backgroundPosition,
     fontFamily: theme.styles[activeTheme].body,
   };
 
   return (
     <Box 
-      style={backgroundStyle} 
+      // style={backgroundStyle} 
       p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}
       scrollBehavior='smooth'
     >

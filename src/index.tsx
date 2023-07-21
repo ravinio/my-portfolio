@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { Box, ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
 import App from './App'
 import Picture1 from './assets/bg/salazar.webp'
 import Picture2 from './assets/bg/halliwell.webp'
@@ -28,7 +28,7 @@ const MyApp = () => {
     styles: {
       global: {
         body: {
-          bg: '#000',
+          bg: '#000'
         },
       },
       salazar: {
@@ -97,10 +97,23 @@ const MyApp = () => {
     },
   });
 
+  const backgroundStyle = {
+    width: '100%',
+    height:'100vh',
+    backgroundImage: `url(${customTheme.images[activeTheme]})`,
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: customTheme.styles[activeTheme].backgroundPosition,
+    fontFamily: customTheme.styles[activeTheme].body,
+  };
+
   return (
     <ChakraProvider theme={customTheme}>
       <ColorModeScript initialColorMode='dark' />
+      <Box style={backgroundStyle}>
       <App themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      </Box>
     </ChakraProvider>
   );
 };

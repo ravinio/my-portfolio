@@ -59,7 +59,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
 
 
   return (
-    <Center h='100vh' className={styles.about} id='about'>
+    <Center h='100vh' id='about'>
       <animated.div ref={boxRef} style={boxAnimation}>
         <Flex 
           style={backgroundStyle}
