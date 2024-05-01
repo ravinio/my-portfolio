@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Center, Flex, Link, Spacer, Text, useTheme } from '@chakra-ui/react'
+import { Center, Flex, Link, Text, useTheme } from '@chakra-ui/react'
 import { useSpring, animated } from '@react-spring/web'
 import styles from '../styles/global.module.css'
 import ContactButtons from '../components/contactBtns'
