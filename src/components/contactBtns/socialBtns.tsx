@@ -24,6 +24,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   const bodyStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
+    borderColor: theme.styles[activeTheme].color
   };
 
   const buttonHoverStyle = {
