@@ -37,18 +37,6 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
     const nextTheme = themes[nextThemeIndex];
     onThemeSwitch(nextTheme);
   };
-
-  const width = window.innerWidth;
-  let numPages;
-  if (width <= 767) {
-    numPages = 6.5;
-  } else if (width >= 768) {
-    numPages = 5.5;
-  }
-
-  // Default value in case numPages is undefined
-  numPages = numPages || 5;
-
   
   const gradientAnimation = {
     width: '1000px',
