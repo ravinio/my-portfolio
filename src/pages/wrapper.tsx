@@ -6,18 +6,30 @@ import {
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import TopNav from '../components/topNav'
 import Home from '../pages/home'
-import About from '../pages/about'
 import Skills from '../pages/skills'
 import Projects from '../pages/projects'
 import Contact from '../pages/contact'
+import { keyframes } from '@emotion/react'
 
 interface AppProps {
   themes: string[];
   onThemeSwitch: (theme: string) => void;
   activeTheme: string;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
+
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
@@ -27,9 +39,25 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
     onThemeSwitch(nextTheme);
   };
 
+  
+  const gradientAnimation = {
+    width: '1000px',
+    height: '1000px',
+    
+    filter: 'blur(50px)',
+    backgroundImage: `linear-gradient(
+      ${theme.styles[activeTheme].gradient1}, 
+      ${theme.styles[activeTheme].gradient2}, 
+      ${theme.styles[activeTheme].gradient3})`,
+    animation: `${rotateAnimation} 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite`,
+    borderRadius: '30% 70% 70% 30%/30% 30% 70% 70%',
+  };
+
   const backgroundStyle = {
-    height:'100vh',
-    backgroundImage: `url(${theme.images[activeTheme]})`,
+    height: '100vh',
+    overflow: 'hidden',
+    backgroundColor: theme.styles[activeTheme].wrapperBackground,
+    //backgroundImage: `url(${theme.images[activeTheme]})`,
     backgroundSize: 'cover',
     //backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
@@ -42,30 +70,42 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme }) => {
         style={backgroundStyle}
         scrollBehavior='smooth'
       >
-        <TopNav themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-
+        <TopNav 
+          themes={themes}
+          activeTheme={activeTheme}
+          onThemeSwitch={switchTheme}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
+        <Box css={gradientAnimation}></Box>
         <Parallax 
-          pages={8} 
+          pages={6} 
           style={{ top: '0', left: '0', height: '100vh', width: '100%' }}
         > 
           <ParallaxLayer offset={0} speed={0}>
-            <Home activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+            <Home 
+              activeTheme={activeTheme} 
+              onThemeSwitch={switchTheme} 
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave} 
+            />
           </ParallaxLayer>
-          
-          <ParallaxLayer offset={1} speed={0}>
-            <About activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-          </ParallaxLayer>
-          
-          <ParallaxLayer offset={2} speed={0}>
+                  
+          <ParallaxLayer offset={1.2} speed={0}>
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={3.5} speed={0}>
+          <ParallaxLayer offset={2.5} speed={0}>
             <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           </ParallaxLayer>
           
-          <ParallaxLayer offset={7} speed={0}>
-            <Contact activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          <ParallaxLayer offset={5} speed={2}>
+            <Contact 
+              activeTheme={activeTheme} 
+              onThemeSwitch={switchTheme} 
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave} 
+            />
           </ParallaxLayer>
         </Parallax>
       </Box>

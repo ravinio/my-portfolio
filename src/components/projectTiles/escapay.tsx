@@ -13,7 +13,7 @@ const Escapay: React.FC<EscapayProps> = ({ activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
-    background: theme.styles[activeTheme].background,
+    background: theme.styles[activeTheme].cardBackground,
     boxShadow: theme.styles[activeTheme].boxShadow,
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
@@ -59,7 +59,7 @@ const Escapay: React.FC<EscapayProps> = ({ activeTheme, onThemeSwitch }) => {
         // maxW={{ base: 'sm', md: 'md' }}  
         height='fit-content'
         overflow='hidden'
-        borderRadius='10px'
+        borderRadius='20px'
         style={backgroundStyle}
       >
         <CardHeader>

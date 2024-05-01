@@ -5,9 +5,11 @@ interface ThemeSwitcherButtonProps {
   themes: string[];
   onThemeSwitch: (theme: string) => void;
   activeTheme: string;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThemeSwitch, activeTheme }) => {
+const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
@@ -17,24 +19,27 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
     onThemeSwitch(nextTheme);
   };
 
-  const navColor = theme.styles[activeTheme]?.navColor;
+  const color = theme.styles[activeTheme]?.color;
   const drawerColor = theme.styles[activeTheme]?.color;
   const bodyFont = theme.styles[activeTheme]?.body;
 
   const buttonHoverStyle = {
-    background: theme.styles[activeTheme].background,
-    boxShadow: theme.styles[activeTheme].boxShadow,
+    background: theme.styles[activeTheme].cardBackground,
+    cursor: 'none'
   };
 
   return (
     <Button
       onClick={switchTheme}
-      color={{ base: drawerColor, md: navColor }}
+      color={{ base: drawerColor, md: color }}
       fontFamily={bodyFont}
       variant="ghost"
       fontWeight="400"
       zIndex="100"
+      transition='background 1s ease'
       _hover={buttonHoverStyle}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {activeTheme.charAt(0).toLowerCase() + activeTheme.slice(1)}
     </Button>

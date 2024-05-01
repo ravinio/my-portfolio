@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
 import App from './App'
@@ -8,6 +8,7 @@ import Picture3 from './assets/bg/wallace.webp'
 import Picture4 from './assets/bg/ichabod.webp'
 import Picture5 from './assets/bg/watney.webp'
 import Picture6 from './assets/bg/gengar.webp'
+import styles from './styles/global.module.css'
 
 const MyApp = () => {
   const themes = ['salazar', 'halliwell', 'wallace', 'ichabod', 'watney', 'gengar'];
@@ -29,62 +30,72 @@ const MyApp = () => {
       global: {
         body: {
           bg: '#000'
-        },
+        }
       },
       salazar: {
-        background: 'rgba(16, 24, 25, 0.80)',
+        wrapperBackground: '#101819',
+        gradient1: '#2f3e46',
+        gradient2: '#52796f',
+        gradient3: '#84a98c',
+        cardBackground: 'rgba(16, 24, 25, 0.25)',
         heading: 'Playfair Display, serif',
         body: 'Plus Jakarta Sans, sans-serif',
         fill: '#cad2c5',
-        color: '#cad2c5',
-        navColor: '#cad2c5',
-        titleColor: '#cad2c5',
+        color: '#cad2c5'
       },
       halliwell: {
-        background: 'rgba(117, 139, 253, 0.60)',
-        backgroundPosition: 'top',
+        wrapperBackground: '#223343',
+        gradient1: '#ca5b3d',
+        gradient2: '#783843',
+        gradient3: '#151F29',
+        cardBackground: 'rgba(117, 139, 253, 0.25)',
+        cardBackgroundPosition: 'top',
         heading: 'Philosopher, sans-serif',
         body: 'Bellefair, serif',
-        fill: '#758bfd',
-        color: '#223343',
-        navColor: '#758bfd',
-        titleColor: '#758bfd'
+        color: '#758bfd'
       },
       wallace: {
-        background: 'rgba(79, 105, 122, 0.80)',
-        backgroundPosition: 'center',
+        wrapperBackground: '#202B31',
+        gradient1: '#C1CED7',
+        gradient2: '#4f697a',
+        gradient3: '#384A57',
+        cardBackground: 'rgba(79, 105, 122, 0.25)',
+        cardBackgroundPosition: 'center',
         boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.4)',
         heading: 'Poppins, sans-serif',
         body: 'Poppins, sans-serif',
-        fill: '#f6e706',
-        color: '#f6e706',
-        navColor: '#f6e706',
-        titleColor: '#f6e706'
+        color: '#f6e706'
       },
       ichabod: {
-        background: 'rgba(31, 30, 30, 0.80)',
+        wrapperBackground: '#1f1e1e',
+        gradient1: '#354f52',
+        gradient2: '#52796f',
+        gradient3: '#84a98c',
+        cardBackground: 'rgba(31, 30, 30, 0.80)',
         heading: 'Beth Ellen, cursive',
         body: 'Gideon Roman, cursive',
-        color: '#ff7518',
-        navColor: '#1f1e1e',
-        titleColor: '#ff7518'
+        color: '#ff7518'
       },
       watney: {
-        background: 'rgba(125, 121, 105, 0.60)',
+        wrapperBackground: '#a42b36',
+        gradient1: '#F9DBBD',
+        gradient2: '#AE8E6D',
+        gradient3: '#84a98c',
+        cardBackground: 'rgba(125, 121, 105, 0.25)',
         boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.24)',
         heading: 'Expletus Sans, cursive',
         body: 'Armata, sans-serif',
-        color: '#56e39f',
-        navColor: '#56e39f',
-        titleColor: '#56e39f'
+        color: '#56e39f'
       },
       gengar: {
-        background: 'rgba(197, 197, 208, 0.50)',
+        wrapperBackground: '#524386',
+        gradient1: '#9D99BA',
+        gradient2: '#7A6EA1',
+        gradient3: '#1A1423',
+        cardBackground: 'rgba(197, 197, 208, 0.25)',
         heading: 'Sulphur Point, sans-serif',
         body: 'Sulphur Point, sans-serif',
-        color: '#524386',
-        navColor: '#e3e3eb',
-        titleColor: '#e3e3eb'
+        color: '#e3e3eb'
       },
     },
     images: {
@@ -96,11 +107,51 @@ const MyApp = () => {
       gengar: Picture6,
     },
   });
+
+  
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const cursor = cursorRef.current;
+      if (cursor) {
+        cursor.style.left = `${e.pageX}px`;
+        cursor.style.top = `${e.pageY}px`;
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    const cursor = cursorRef.current;
+    if (cursor) {
+      cursor.classList.add(styles.hoverCursor);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const cursor = cursorRef.current;
+    if (cursor) {
+      cursor.classList.remove(styles.hoverCursor);
+    }
+  };
   
   return (
     <ChakraProvider theme={customTheme}>
+      <div ref={cursorRef} className={styles.customCursor} />
       <ColorModeScript initialColorMode='dark' />
-      <App themes={themes} activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+      <App 
+        themes={themes} 
+        activeTheme={activeTheme} 
+        onThemeSwitch={switchTheme} 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      />
     </ChakraProvider>
   );
 };

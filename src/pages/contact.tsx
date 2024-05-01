@@ -2,17 +2,16 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Center, Flex, Link, Spacer, Text, useTheme } from '@chakra-ui/react'
 import { useSpring, animated } from '@react-spring/web'
 import styles from '../styles/global.module.css'
-import EmailBtn from '../components/contactBtns/emailBtn'
-import LinkedInBtn from '../components/contactBtns/linkedInBtn'
-import FigmaBtn from '../components/contactBtns/figmaBtn'
-import GithubBtn from '../components/contactBtns/githubBtn'
+import ContactButtons from '../components/contactBtns'
 
 interface ContactProps {
   activeTheme: string;
   onThemeSwitch: (theme: string) => void;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
+const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
@@ -23,7 +22,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   const backgroundStyle = {
-    background: theme.styles[activeTheme].background,
+    background: theme.styles[activeTheme].cardBackground,
     boxShadow: theme.styles[activeTheme].boxShadow
   }
 
@@ -86,32 +85,26 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch }) => {
           justifyContent='center' 
           gap={{ base: '15px', md: '30px' }}
           padding={{ base: '15px', md: '30px' }}
-          borderRadius='10px'
+          borderRadius='20px'
         >
           <h3 style={subHeadingStyle}>get in touch</h3>
           <p style={bodyStyle}>
             If you have any inquiries, collaboration opportunities, or simply want to connect, I'd love to hear from you!
           </p>
-          <Flex
-            w='100%'
-            flexDirection={{ base: 'column', md: 'row' }}
-            gap={{ base: '6px', md: '0px' }}
-            flexWrap='wrap'
-          >
-            <EmailBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-            <Spacer />
-            <LinkedInBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-            <Spacer />
-            <FigmaBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-            <Spacer />
-            <GithubBtn activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-          </Flex>
+          <ContactButtons 
+            activeTheme={activeTheme} 
+            onThemeSwitch={switchTheme}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave} 
+          />
           <Text fontSize='xs' style={bodyStyle}>
             Check out the figma file I used to design this website{' '}
                 <Link
                 textDecor='underline' 
                 href='https://www.figma.com/file/ghXqRDpx0wdnb22gE7GkKW/stuff?type=design&node-id=106%3A654&mode=design&t=wKy0QbeVRTqP8Ixq-1'
                 isExternal
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
                 >
                 here
                 </Link>

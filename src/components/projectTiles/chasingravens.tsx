@@ -13,7 +13,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
   const theme = useTheme();
 
   const backgroundStyle = {
-    background: theme.styles[activeTheme].background,
+    background: theme.styles[activeTheme].cardBackground,
     boxShadow: theme.styles[activeTheme].boxShadow,
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
@@ -59,7 +59,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
         // maxW={{ base: 'sm', md: 'md' }}  
         height='fit-content'
         overflow='hidden'
-        borderRadius='10px'
+        borderRadius='20px'
         style={backgroundStyle}
       >
         <CardHeader>
@@ -82,8 +82,8 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
         </CardHeader>
         <CardBody>
           <Text fontSize='14px'>
-            This website created as a gift for my partner, showcasing our passion for both design and gastronomy. Meticulously handcrafted using the powerful combination of Contentful API, React, and SCSS, it has been transformed into a captivating food blog. 
-            The site boasts an inviting home, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe that permeates every corner.
+            This is a food blog built to showcase my love for both design and gastronomy. Meticulously handcrafted using the combination of Contentful API, React, and SCSS. 
+            The site contains an inticing home page, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe.
           </Text>
         </CardBody>
         <Image

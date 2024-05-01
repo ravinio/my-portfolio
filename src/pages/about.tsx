@@ -12,7 +12,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
-    background: theme.styles[activeTheme].background,
+    background: theme.styles[activeTheme].cardBackground,
     boxShadow: theme.styles[activeTheme].boxShadow
   }
 
@@ -72,7 +72,7 @@ const About: React.FC<AboutProps> = ({ activeTheme, onThemeSwitch }) => {
           justifyContent='center' 
           gap={{ base: '15px', md: '30px' }}
           padding={{ base: '15px', md: '30px' }}
-          borderRadius='10px'
+          borderRadius='20px'
         >
           <h3 style={subHeadingStyle}>about me</h3>
           <p style={bodyStyle}>

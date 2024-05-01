@@ -1,7 +1,53 @@
-/* ----- home page ----- */
+html, body {
+    cursor: none;
+}
+
+a:hover {
+    cursor: none;
+}
+
+.customCursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,1);
+    pointer-events: none; 
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}
+
+.hoverCursor {
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+    background-color: rgba(255,255,255,.5);
+    width: 30px; 
+    height: 30px;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: linear-gradient(59deg, rgba(252,252,252,0.05) 20%, rgba(252,252,252,.5) 100%);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(59deg, rgba(252,252,252,0.05) 20%, rgba(252,252,252,.5) 100%);
+    border-radius: 20px;
+}
+
 .myImage {
     border-radius: 500px 500px 0px 0px;
-    background-image: url('../assets/me/its-me-2024-color.png');
+    background-image: url('../assets/me/london-eye-ravin-me.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -14,17 +60,18 @@ h1 {
 
 h2 {
     line-height: initial;
-    font-size: calc(14px + (24 - 14) * ((100vw - 270px) / (1600 - 270)));
+    font-size: calc(14px + (32 - 24) * ((100vw - 270px) / (1600 - 270)));
 }
 
-/* ----- about page ----- */
 h3 {
     line-height: initial;
     font-size: calc(24px + (50 - 24) * ((100vw - 270px) / (1600 - 270)));
+    word-wrap: normal;
 }
 
 p {
-    font-size: calc(14px + (20 - 14) * ((100vw - 270px) / (1600 - 270)));
+    font-size: calc(14px + (16 - 14) * ((100vw - 270px) / (1600 - 270)));
+    word-wrap: normal;
 }
 
 .navbar {

@@ -21,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
   };
 
   const sectionHeadingStyle = {
-    color: theme.styles[activeTheme].titleColor,
+    color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
   };
 
