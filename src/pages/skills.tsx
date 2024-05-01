@@ -58,6 +58,7 @@ const Skills: React.FC<SkillsProps> = ({ activeTheme, onThemeSwitch }) => {
       h='auto' 
       flexDirection='column' 
       gap={{ base: '15px', md: '30px' }}
+      p={{ base: '100px 15px', md: '100px 30px'}} 
     >
       <h1 style={sectionHeadingStyle}>my skills</h1>
       <Flex  

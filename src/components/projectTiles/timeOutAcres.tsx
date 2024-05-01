@@ -14,7 +14,6 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch 
 
   const backgroundStyle = {
     background: theme.styles[activeTheme].cardBackground,
-    boxShadow: theme.styles[activeTheme].boxShadow,
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
   }

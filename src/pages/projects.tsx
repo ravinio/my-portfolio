@@ -28,15 +28,15 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
   return (
     <Center 
       id='projects' 
-      // my='100px'
       h='auto' 
-      p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}    
+      p={{ base: '50px 15px', md: '100px 30px'}}    
       flexDirection='column' 
       gap={{ base: '15px', md: '30px' }}
     >
       <h1 style={sectionHeadingStyle}>my projects</h1>
       <Grid  
         h='auto'
+        maxWidth='1329.34px'
         py='30px'
         justifyContent='center'
         flexWrap='wrap'

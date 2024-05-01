@@ -3,7 +3,6 @@ import {
   Box,
   useTheme
 } from '@chakra-ui/react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import TopNav from '../components/topNav'
 import Home from '../pages/home'
 import Skills from '../pages/skills'
@@ -38,6 +37,17 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
     const nextTheme = themes[nextThemeIndex];
     onThemeSwitch(nextTheme);
   };
+
+  const width = window.innerWidth;
+  let numPages;
+  if (width <= 767) {
+    numPages = 6.5;
+  } else if (width >= 768) {
+    numPages = 5.5;
+  }
+
+  // Default value in case numPages is undefined
+  numPages = numPages || 5;
 
   
   const gradientAnimation = {
@@ -78,36 +88,33 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
           onMouseLeave={onMouseLeave}
         />
         <Box css={gradientAnimation}></Box>
-        <Parallax 
-          pages={6} 
-          style={{ top: '0', left: '0', height: '100vh', width: '100%' }}
+        <Box 
+          position='absolute' 
+          width='100%' 
+          height='100vh'
+          overflow='hidden scroll'
+          top='0px'
+          left='0px'
         > 
-          <ParallaxLayer offset={0} speed={0}>
+
             <Home 
               activeTheme={activeTheme} 
               onThemeSwitch={switchTheme} 
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave} 
             />
-          </ParallaxLayer>
                   
-          <ParallaxLayer offset={1.2} speed={0}>
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-          </ParallaxLayer>
           
-          <ParallaxLayer offset={2.5} speed={0}>
             <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-          </ParallaxLayer>
           
-          <ParallaxLayer offset={5} speed={2}>
             <Contact 
               activeTheme={activeTheme} 
               onThemeSwitch={switchTheme} 
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave} 
             />
-          </ParallaxLayer>
-        </Parallax>
+        </Box>
       </Box>
   );
 };

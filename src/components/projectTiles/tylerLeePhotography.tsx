@@ -14,7 +14,6 @@ const TylerLeePhotography: React.FC<TylerLeePhotographyProps> = ({ activeTheme, 
 
   const backgroundStyle = {
     background: theme.styles[activeTheme].cardBackground,
-    boxShadow: theme.styles[activeTheme].boxShadow,
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
   }
