@@ -140,6 +140,17 @@ const MyApp = () => {
       cursor.classList.remove(styles.hoverCursor);
     }
   };
+
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
+  useEffect(() => {
+    const cursor = cursorRef.current;
+    if (cursor && isMobileDevice()) {
+      cursor.classList.add(styles.hideCursor);
+    }
+  }, []);
   
   return (
     <ChakraProvider theme={customTheme}>

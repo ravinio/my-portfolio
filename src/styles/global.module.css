@@ -6,6 +6,10 @@ a:hover {
     cursor: none;
 }
 
+.hideCursor {
+    cursor: none;
+}
+
 .customCursor {
     position: fixed;
     width: 10px;
@@ -24,17 +28,6 @@ a:hover {
     width: 30px; 
     height: 30px;
 }
-
-@media only screen and (max-device-width: 360px) {
-    html,
-    body {
-      cursor: none;
-    }
-  
-    a:hover {
-      cursor: none;
-    }
-  }
 
 /* Firefox */
 * {
