@@ -25,6 +25,17 @@ a:hover {
     height: 30px;
 }
 
+@media only screen and (max-device-width: 360px) {
+    html,
+    body {
+      cursor: none;
+    }
+  
+    a:hover {
+      cursor: none;
+    }
+  }
+
 /* Firefox */
 * {
     scrollbar-width: auto;
