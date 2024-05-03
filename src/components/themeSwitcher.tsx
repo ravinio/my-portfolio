@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, useTheme } from '@chakra-ui/react';
+import { MdPalette } from "react-icons/md";
 
 interface ThemeSwitcherButtonProps {
   themes: string[];
@@ -32,6 +33,7 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
     <Button
       onClick={switchTheme}
       color={{ base: drawerColor, md: color }}
+      rightIcon={<MdPalette />}
       fontFamily={bodyFont}
       variant="ghost"
       fontWeight="400"
