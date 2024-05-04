@@ -49,19 +49,31 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch, onMouse
         <GridItem w='100%'>
           <OSM 
             activeTheme={activeTheme} 
-            onThemeSwitch={switchTheme}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave} 
           />
         </GridItem>     
         <GridItem w='100%'>       
-          <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          <TimeOutAcres 
+            activeTheme={activeTheme} 
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          />
         </GridItem>  
         <GridItem w='100%'>
-          <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          <ChasingRavens 
+            activeTheme={activeTheme} 
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          />
         </GridItem>          
         <GridItem w='100%'>
-          <Escapay activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+          <Escapay 
+            activeTheme={activeTheme} 
+            onThemeSwitch={switchTheme}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          />
         </GridItem>  
         {/* <GridItem w='100%'>
           <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />

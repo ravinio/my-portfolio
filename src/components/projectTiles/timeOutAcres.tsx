@@ -6,10 +6,11 @@ import Gif from '../../assets/projects/gifs/toa.gif'
 
 interface TimeOutAcresProps {
   activeTheme: string;
-  onThemeSwitch: (theme: string) => void;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch }) => {
+const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onMouseEnter, onMouseLeave   }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
@@ -72,7 +73,11 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onThemeSwitch 
               >
                 <Image src={Icon} />
               </Center>
-              <Link href='https://www.timeoutacres.com/'>
+              <Link 
+                href='https://www.timeoutacres.com/'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
                 <h3 style={subHeadingStyle}>time out acres</h3>
               </Link>
             </Flex>

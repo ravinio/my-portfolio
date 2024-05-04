@@ -6,12 +6,11 @@ import Gif from '../../assets/projects/gifs/osm.gif'
 
 interface OneStaffMedicalProps {
   activeTheme: string;
-  onThemeSwitch: (theme: string) => void;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
 
-const OneStaffMedical: React.FC<OneStaffMedicalProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave  }) => {
+const OneStaffMedical: React.FC<OneStaffMedicalProps> = ({ activeTheme, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
@@ -75,7 +74,11 @@ const OneStaffMedical: React.FC<OneStaffMedicalProps> = ({ activeTheme, onThemeS
                 <Image src={Icon} />
               </Center>
 
-              <Link href='https://onestaffmedical.com/'>
+              <Link 
+                href='https://onestaffmedical.com/'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
                 <h3 style={subHeadingStyle}>onestaff medical</h3>
               </Link>
             </Flex>

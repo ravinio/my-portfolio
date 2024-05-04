@@ -7,9 +7,11 @@ import Gif from '../../assets/projects/gifs/escapay.gif'
 interface EscapayProps {
   activeTheme: string;
   onThemeSwitch: (theme: string) => void;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const Escapay: React.FC<EscapayProps> = ({ activeTheme, onThemeSwitch }) => {
+const Escapay: React.FC<EscapayProps> = ({ activeTheme, onMouseEnter, onMouseLeave  }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
@@ -73,7 +75,11 @@ const Escapay: React.FC<EscapayProps> = ({ activeTheme, onThemeSwitch }) => {
               >
                 <Image src={Icon} />
               </Center>  
-              <Link href='https://www.figma.com/file/l4hnTSAnOldzyQbEd9AFDS/Escapay?type=design&node-id=0%3A1&mode=design&t=ZuBeaukh0HrHxhZo-1'>
+              <Link 
+                href='https://www.figma.com/file/l4hnTSAnOldzyQbEd9AFDS/Escapay?type=design&node-id=0%3A1&mode=design&t=ZuBeaukh0HrHxhZo-1'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
                 <h3 style={subHeadingStyle}>escapay</h3>
               </Link>
             </Flex>

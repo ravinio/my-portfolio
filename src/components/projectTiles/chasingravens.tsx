@@ -6,10 +6,11 @@ import Gif from '../../assets/projects/gifs/chasingravens.gif'
 
 interface ChasingRavensProps {
   activeTheme: string;
-  onThemeSwitch: (theme: string) => void;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitch }) => {
+const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
@@ -73,7 +74,11 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onThemeSwitc
               >
                 <Image src={Icon} />
               </Center>   
-              <Link href='https://www.chasingravensblog.com/'>
+              <Link 
+                href='https://www.chasingravensblog.com/'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
                 <h3 style={subHeadingStyle}>chasing ravens</h3>
               </Link>
             </Flex>
