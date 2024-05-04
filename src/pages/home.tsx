@@ -12,7 +12,7 @@ interface HomeProps {
   onMouseLeave: () => void;
 }
 
-const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave  }) => {
+const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
 
   const switchTheme = () => {

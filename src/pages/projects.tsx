@@ -2,15 +2,18 @@ import React from 'react'
 import { Center, Grid, GridItem, useTheme } from '@chakra-ui/react'
 import TimeOutAcres from '../components/projectTiles/timeOutAcres'
 import ChasingRavens from '../components/projectTiles/chasingravens'
-import TylerLeePhotography from '../components/projectTiles/tylerLeePhotography'
+// import TylerLeePhotography from '../components/projectTiles/tylerLeePhotography'
 import Escapay from '../components/projectTiles/escapay'
+import OSM from '../components/projectTiles/onestaffmedical'
 
 interface ProjectsProps {
   activeTheme: string;
   onThemeSwitch: (theme: string) => void;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
+const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave  }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
@@ -42,19 +45,27 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch }) => {
         flexWrap='wrap'
         templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
         gap={6}
-      >     
+      > 
+        <GridItem w='100%'>
+          <OSM 
+            activeTheme={activeTheme} 
+            onThemeSwitch={switchTheme}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave} 
+          />
+        </GridItem>     
         <GridItem w='100%'>       
           <TimeOutAcres activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
         <GridItem w='100%'>
           <ChasingRavens activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-        </GridItem>  
-        <GridItem w='100%'>
-          <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />
-        </GridItem>  
+        </GridItem>          
         <GridItem w='100%'>
           <Escapay activeTheme={activeTheme} onThemeSwitch={switchTheme} />
         </GridItem>  
+        {/* <GridItem w='100%'>
+          <TylerLeePhotography activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+        </GridItem>   */}
       </Grid>
     </Center>
   );

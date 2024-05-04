@@ -94,7 +94,12 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
                   
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
           
-            <Projects activeTheme={activeTheme} onThemeSwitch={switchTheme} />
+            <Projects 
+              activeTheme={activeTheme} 
+              onThemeSwitch={switchTheme}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave} 
+            />
           
             <Contact 
               activeTheme={activeTheme} 
