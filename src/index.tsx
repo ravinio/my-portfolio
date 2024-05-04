@@ -91,7 +91,7 @@ const MyApp = () => {
         wrapperBackground: '#524386',
         gradient1: '#9D99BA',
         gradient2: '#7A6EA1',
-        gradient3: '#1A1423',
+        gradient3: '#2F2162',
         cardBackground: 'rgba(197, 197, 208, 0.25)',
         heading: 'Sulphur Point, sans-serif',
         body: 'Sulphur Point, sans-serif',
