@@ -49,6 +49,11 @@ a:hover {
     border-radius: 20px;
 }
 
+::selection {
+    background-color: rgba(252,252,252,0.2);
+    color: rgba(252,252,252,1);
+}
+
 .myImage {
     border-radius: 500px 500px 0px 0px;
     background-image: url('../assets/me/london-eye-ravin-me.JPG');

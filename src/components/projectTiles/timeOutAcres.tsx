@@ -85,8 +85,12 @@ const TimeOutAcres: React.FC<TimeOutAcresProps> = ({ activeTheme, onMouseEnter, 
         </CardHeader>
         <CardBody>
           <Text fontSize='14px'>
-            This website was built for a local client that boards and trains dogs. As they embarked on their online journey, they entrusted me with the task of not only establishing their web presence but also revitalizing their entire brand identity.
-            This dynamic website seamlessly integrates engaging YouTube videos, offering valuable insights into their services. Additionally, a user-friendly contact form empowers prospective clients to effortlessly reach out and inquire about the exceptional offerings available.
+            This website was built for a local client that boards and trains dogs. As they embarked on their online journey, 
+            they entrusted me with the task of not only establishing their web presence but also revitalizing their entire 
+            brand identity.
+            This dynamic website seamlessly integrates engaging YouTube videos, offering valuable insights into their services. 
+            Additionally, a user-friendly contact form allows prospective clients to effortlessly reach out and inquire 
+            about the services they provide.
           </Text>
         </CardBody>
         <Image

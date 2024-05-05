@@ -86,8 +86,11 @@ const OneStaffMedical: React.FC<OneStaffMedicalProps> = ({ activeTheme, onMouseE
         </CardHeader>
         <CardBody>
           <Text fontSize='14px'>
-            As the UI/UX Designer at OneStaff Medical, I created a comprehensive overhaul of our website, both internally and externally. 
-            By leveraging cutting-edge design principles and user experience enhancements, I ensured that our marketing platform became fully mobile-friendly, resulting in heightened user engagement and an enhanced overall experience.
+            As the UI/UX Designer at OneStaff Medical, 
+            I created a complete overhaul of their website, both internally and externally. 
+            By leveraging modern design principles and target user research, 
+            I designed and built many user experience enhancing features such as a fully mobile friendly website 
+            and a consistent design system, resulting in heightened user engagement and an enhanced overall experience.
             <br />
               Check out what OneStaff looked like right before they hired me with the way back machine{' '}
             <Link
