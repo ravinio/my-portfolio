@@ -101,6 +101,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, o
                   isExternal
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
+                  target='_blank'
                 >
                   here
                 </Link>

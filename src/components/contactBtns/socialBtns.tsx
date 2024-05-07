@@ -33,7 +33,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   };
 
   const handleClick = () => {
-    window.location.href = link;
+    window.open(link, '_blank', 'noopener,noreferrer');
   };
 
   return (

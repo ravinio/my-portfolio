@@ -105,8 +105,9 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEn
                 isExternal
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                target='_blank'
                 >
-                here
+                  here
                 </Link>
             .
           </Text>

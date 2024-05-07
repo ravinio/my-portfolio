@@ -1,23 +1,36 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react'
-import { useSpring, animated, config } from '@react-spring/web'
-import Icon from '../../assets/projects/icons/chasingraven.svg'
-import Gif from '../../assets/projects/gifs/chasingravens.gif'
+import React, { useEffect, useRef, useState } from 'react';
+import { ReactElement } from 'react';
+import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react';
+import { useSpring, animated, config } from '@react-spring/web';
 
-interface ChasingRavensProps {
+interface ProjectCardProps {
   activeTheme: string;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  icon: string;
+  gif: string;
+  title: string;
+  description: ReactElement | string[];
+  websiteUrl: string;
 }
 
-const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter, onMouseLeave }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  activeTheme,
+  onMouseEnter,
+  onMouseLeave,
+  icon,
+  gif,
+  title,
+  description,
+  websiteUrl,
+}) => {
   const theme = useTheme();
 
   const backgroundStyle = {
     background: theme.styles[activeTheme].cardBackground,
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].body,
-  }
+  };
 
   const subHeadingStyle = {
     fontFamily: theme.styles[activeTheme].heading,
@@ -34,7 +47,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2, // Adjust the threshold as needed (0.2 means 20% visible)
+      threshold: 0.2
     };
 
     const boxObserver = new IntersectionObserver((entries) => {
@@ -47,7 +60,6 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter
       boxObserver.observe(boxRef.current);
     }
 
-    // Clean up the observers when the component unmounts
     return () => {
       boxObserver.disconnect();
     };
@@ -56,7 +68,6 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter
   return (
     <animated.div ref={boxRef} style={boxAnimation}>
       <Card 
-        // maxW={{ base: 'sm', md: 'md' }}  
         height='fit-content'
         overflow='hidden'
         borderRadius='20px'
@@ -72,31 +83,31 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter
                 width='48px'
                 p='5px'
               >
-                <Image src={Icon} />
-              </Center>   
+                <Image src={icon} />
+              </Center>
               <Link 
-                href='https://www.chasingravensblog.com/'
+                href={websiteUrl}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                target='_blank'
               >
-                <h3 style={subHeadingStyle}>chasing ravens</h3>
+                <h3 style={subHeadingStyle}>{title}</h3>
               </Link>
             </Flex>
           </Flex>
         </CardHeader>
         <CardBody>
           <Text fontSize='14px'>
-            This is a food blog built to showcase my love for both design and gastronomy. Meticulously handcrafted using the combination of Contentful API, React, and SCSS. 
-            The site contains an enticing home page, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe.
+            {description}
           </Text>
         </CardBody>
         <Image
           objectFit='cover'
-          src={Gif}
+          src={gif}
         />
       </Card>
     </animated.div>
   );
 };
 
-export default ChasingRavens;
+export default ProjectCard;
