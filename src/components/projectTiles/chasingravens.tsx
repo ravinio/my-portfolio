@@ -87,7 +87,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ activeTheme, onMouseEnter
         <CardBody>
           <Text fontSize='14px'>
             This is a food blog built to showcase my love for both design and gastronomy. Meticulously handcrafted using the combination of Contentful API, React, and SCSS. 
-            The site contains an inticing home page, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe.
+            The site contains an enticing home page, an informative about page, and a captivating blog section, all wrapped in a custom brand and vibe.
           </Text>
         </CardBody>
         <Image

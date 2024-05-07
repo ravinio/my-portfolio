@@ -46,6 +46,11 @@ const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch, onMouse
         templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
         gap={6}
       > 
+        {/* 
+          future Ravin note:
+          to make another gif for a new project, 
+          visit https://imgflip.com/gif-maker 
+          */}
         <GridItem w='100%'>
           <OSM 
             activeTheme={activeTheme} 

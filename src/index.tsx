@@ -34,68 +34,63 @@ const MyApp = () => {
       },
       salazar: {
         wrapperBackground: '#101819',
+        cardBackground: 'rgba(16, 24, 25, 0.25)',
         gradient1: '#2f3e46',
         gradient2: '#52796f',
         gradient3: '#84a98c',
-        cardBackground: 'rgba(16, 24, 25, 0.25)',
+        color: '#cad2c5',
         heading: 'Playfair Display, serif',
-        body: 'Plus Jakarta Sans, sans-serif',
-        fill: '#cad2c5',
-        color: '#cad2c5'
+        body: 'Plus Jakarta Sans, sans-serif'
       },
       halliwell: {
         wrapperBackground: '#223343',
+        cardBackground: 'rgba(117, 139, 253, 0.25)',
         gradient1: '#ca5b3d',
         gradient2: '#783843',
         gradient3: '#151F29',
-        cardBackground: 'rgba(117, 139, 253, 0.25)',
-        cardBackgroundPosition: 'top',
+        color: '#758bfd',
         heading: 'Philosopher, sans-serif',
-        body: 'Bellefair, serif',
-        color: '#758bfd'
+        body: 'Bellefair, serif'
       },
       wallace: {
         wrapperBackground: '#202B31',
+        cardBackground: 'rgba(79, 105, 122, 0.25)',
         gradient1: '#C1CED7',
         gradient2: '#4f697a',
         gradient3: '#384A57',
-        cardBackground: 'rgba(79, 105, 122, 0.25)',
-        cardBackgroundPosition: 'center',
-        boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.4)',
+        color: '#f6e706',
         heading: 'Poppins, sans-serif',
-        body: 'Poppins, sans-serif',
-        color: '#f6e706'
+        body: 'Poppins, sans-serif'
       },
       ichabod: {
         wrapperBackground: '#1f1e1e',
+        cardBackground: 'rgba(31, 30, 30, 0.80)',
         gradient1: '#2A1A1F',
         gradient2: '#764134',
         gradient3: '#792301',
-        cardBackground: 'rgba(31, 30, 30, 0.80)',
+        color: '#ff7518',
         heading: 'Beth Ellen, cursive',
         body: 'Gideon Roman, cursive',
-        color: '#ff7518'
       },
       watney: {
-        wrapperBackground: '#55262A',
-        gradient1: '#a42b36',
-        gradient2: '#AE8E6D',
-        gradient3: '#AE8E6D',
-        cardBackground: 'rgba(125, 121, 105, 0.25)',
-        boxShadow: '0px 4px 10px 0px rgba(54, 54, 54, 0.24)',
+        wrapperBackground: '#201C18',
+        cardBackground: 'rgba(86, 227, 159, 0.15)',
+        gradient1: '#452225',
+        gradient2: '#4F3523',
+        gradient3: '#51483F',
+        color: '#56e39f',
         heading: 'Expletus Sans, cursive',
-        body: 'Armata, sans-serif',
-        color: '#56e39f'
+        body: 'Armata, sans-serif'
       },
       gengar: {
         wrapperBackground: '#524386',
+        cardBackground: 'rgba(197, 197, 208, 0.25)',
         gradient1: '#9D99BA',
         gradient2: '#7A6EA1',
         gradient3: '#2F2162',
-        cardBackground: 'rgba(197, 197, 208, 0.25)',
+        color: '#e3e3eb',
         heading: 'Sulphur Point, sans-serif',
-        body: 'Sulphur Point, sans-serif',
-        color: '#e3e3eb'
+        body: 'Sulphur Point, sans-serif'
       },
     },
     images: {
