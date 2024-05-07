@@ -20,13 +20,6 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave  }) => {
   const theme = useTheme();
 
-  const switchTheme = () => {
-    const themeIndex = theme.indexOf(activeTheme);
-    const nextThemeIndex = (themeIndex + 1) % theme.length;
-    const nextTheme = theme[nextThemeIndex];
-    onThemeSwitch(nextTheme);
-  };
-
   const sectionHeadingStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
