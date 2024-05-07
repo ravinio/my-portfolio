@@ -28,7 +28,7 @@ const ContactButtons: React.FC<SocialBtnProps>= ({ activeTheme, onThemeSwitch, o
         onMouseLeave={onMouseLeave}
         icon={<FiFigma />}
         label='Figma Link'
-        link='https://figma.com/@ravinoel'
+        link='https://figma.com/@ravinio'
       />
       <SocialBtn
         activeTheme={activeTheme}
