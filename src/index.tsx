@@ -143,7 +143,7 @@ const MyApp = () => {
   useEffect(() => {
     const cursor = cursorRef.current;
     if (cursor && isMobileDevice()) {
-      cursor.classList.add(styles.hideCursor);
+      cursor.style.display = 'none';
     }
   }, []);
   
