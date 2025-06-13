@@ -6,7 +6,7 @@ import {
 import TopNav from '../components/topNav'
 import Home from '../pages/home'
 import Skills from '../pages/skills'
-import Projects from '../pages/projects'
+import Projects from './projects'
 import Contact from '../pages/contact'
 import { keyframes } from '@emotion/react'
 
@@ -84,7 +84,6 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
           top='0px'
           left='0px'
         > 
-
             <Home 
               activeTheme={activeTheme} 
               onThemeSwitch={switchTheme} 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ReactElement } from 'react';
-import { Card, CardBody, CardHeader, Center, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react';
+import { Card, CardBody, Flex, Image, Link, Tag, Text, useTheme } from '@chakra-ui/react';
 import { useSpring, animated, config } from '@react-spring/web';
 
 interface ProjectCardProps {
@@ -12,6 +12,7 @@ interface ProjectCardProps {
   title: string;
   description: ReactElement | string[];
   websiteUrl: string;
+  tags: string[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -23,6 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   websiteUrl,
+  tags,
 }) => {
   const theme = useTheme();
 
@@ -35,6 +37,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const subHeadingStyle = {
     fontFamily: theme.styles[activeTheme].heading,
   };
+
+  const tagFont = theme.styles[activeTheme].wrapperBackground;
+  const tagBg = theme.styles[activeTheme].color;
 
   const [boxInView, setBoxInView] = useState(false);
   const boxRef = useRef(null);
@@ -66,47 +71,58 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   }, []);
 
   return (
-    <animated.div ref={boxRef} style={boxAnimation}>
-      <Card 
-        height='fit-content'
-        overflow='hidden'
-        borderRadius='20px'
-        style={backgroundStyle}
-      >
-        <CardHeader>
-          <Flex>
-            <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-              <Center
-                borderRadius='full'
-                backgroundColor='rgba(255,255,255)'
-                height='48px'
-                width='48px'
-                p='5px'
-              >
-                <Image src={icon} />
-              </Center>
-              <Link 
-                href={websiteUrl}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-                target='_blank'
-              >
-                <h3 style={subHeadingStyle}>{title}</h3>
-              </Link>
-            </Flex>
-          </Flex>
-        </CardHeader>
-        <CardBody>
-          <Text fontSize='14px'>
-            {description}
+  <animated.div ref={boxRef} style={boxAnimation}>
+    <Card
+      height="fit-content"
+      overflow="hidden"
+      borderRadius="20px"
+      style={backgroundStyle}
+      boxShadow="lg"
+      w={{ md: '757px', sm: 'auto' }}
+    >
+      <Image
+        src={gif}
+        alt={`${title} screenshot`}
+        objectFit="cover"
+        width="100%"
+        maxHeight="500px"
+      />
+
+      <CardBody>
+        <Flex gap="2" flexWrap="wrap" mb="4">
+          {tags.map((tag) => (
+            <Tag
+              key={tag}
+              size="sm"
+              borderRadius="full"
+              variant="solid"
+              backgroundColor={tagBg}
+              color={tagFont}
+            >
+              {tag}
+            </Tag>
+          ))}
+        </Flex>
+
+        <Link
+          href={websiteUrl}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          target="_blank"
+          rel="noopener noreferrer"
+          _hover={{ textDecoration: 'underline' }}
+        >
+          <Text fontSize="xl" fontWeight="bold" style={subHeadingStyle}>
+            {title}
           </Text>
-        </CardBody>
-        <Image
-          objectFit='cover'
-          src={gif}
-        />
-      </Card>
-    </animated.div>
+        </Link>
+
+        <Text fontSize="sm" mt="2">
+          {description}
+        </Text>
+      </CardBody>
+    </Card>
+  </animated.div>
   );
 };
 
