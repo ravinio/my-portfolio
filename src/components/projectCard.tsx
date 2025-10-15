@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ReactElement } from 'react';
-import { Card, CardBody, Flex, Image, Link, Tag, Text, useTheme } from '@chakra-ui/react';
+import { Card, CardBody, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { useSpring, animated, config } from '@react-spring/web';
 
 interface ProjectCardProps {
@@ -11,7 +12,7 @@ interface ProjectCardProps {
   gif: string;
   title: string;
   description: ReactElement | string[];
-  websiteUrl: string;
+  page: string;
   tags: string[];
 }
 
@@ -23,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   gif,
   title,
   description,
-  websiteUrl,
+  page,
   tags,
 }) => {
   const theme = useTheme();
@@ -37,9 +38,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const subHeadingStyle = {
     fontFamily: theme.styles[activeTheme].heading,
   };
-
-  const tagFont = theme.styles[activeTheme].wrapperBackground;
-  const tagBg = theme.styles[activeTheme].color;
 
   const [boxInView, setBoxInView] = useState(false);
   const boxRef = useRef(null);
@@ -72,56 +70,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
   <animated.div ref={boxRef} style={boxAnimation}>
-    <Card
-      height="fit-content"
-      overflow="hidden"
-      borderRadius="20px"
-      style={backgroundStyle}
-      boxShadow="lg"
-      w={{ md: '757px', sm: 'auto' }}
+    <Link
+      as={RouterLink}
+      to={page}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      role="group" 
+      _hover={{ textDecoration: 'none' }}
     >
-      <Image
-        src={gif}
-        alt={`${title} screenshot`}
-        objectFit="cover"
-        width="100%"
-        maxHeight="500px"
-      />
+      <Card
+        height="fit-content"
+        overflow="hidden"
+        borderRadius="20px"
+        style={backgroundStyle}
+        boxShadow="lg"
+        w={{ md: '757px', sm: 'auto' }}
+      >
+        <Image
+          src={gif}
+          alt={`${title} screenshot`}
+          objectFit="cover"
+          width="100%"
+          maxHeight="500px"
+        />
 
-      <CardBody>
-        <Flex gap="2" flexWrap="wrap" mb="4">
-          {tags.map((tag) => (
-            <Tag
-              key={tag}
-              size="sm"
-              borderRadius="full"
-              variant="solid"
-              backgroundColor={tagBg}
-              color={tagFont}
+        <CardBody>
+          <Flex gap="2" flexWrap="wrap" mb="4">
+          {['UI/UX Design', 'React', 'Branding', 'Commercial'].map((tag, idx) => (
+            <Text
+              key={idx}
+              fontSize="xs"
+              px="2"
+              py="1"
+              borderRadius="md"
+              bg="gray.200"
+              color="gray.700"
             >
               {tag}
-            </Tag>
+            </Text>
           ))}
         </Flex>
-
-        <Link
-          href={websiteUrl}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          target="_blank"
-          rel="noopener noreferrer"
-          _hover={{ textDecoration: 'underline' }}
-        >
-          <Text fontSize="xl" fontWeight="bold" style={subHeadingStyle}>
+          <Text fontSize="xl" fontWeight="bold" style={subHeadingStyle} _groupHover={{ textDecoration: 'underline' }}>
             {title}
           </Text>
-        </Link>
 
-        <Text fontSize="sm" mt="2">
-          {description}
-        </Text>
-      </CardBody>
-    </Card>
+          <Text fontSize="sm" mt="2">
+            {description}
+          </Text>
+        </CardBody>
+      </Card>
+    </Link>
   </animated.div>
   );
 };

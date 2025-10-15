@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { BrowserRouter } from 'react-router-dom';
 import App from './App'
 import Picture1 from './assets/bg/salazar.webp'
 import Picture2 from './assets/bg/halliwell.webp'
@@ -149,15 +150,17 @@ const MyApp = () => {
   
   return (
     <ChakraProvider theme={customTheme}>
-      <div ref={cursorRef} className={styles.customCursor} />
-      <ColorModeScript initialColorMode='dark' />
-      <App 
-        themes={themes} 
-        activeTheme={activeTheme} 
-        onThemeSwitch={switchTheme} 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      />
+      <BrowserRouter>
+        <div ref={cursorRef} className={styles.customCursor} />
+        <ColorModeScript initialColorMode='dark' />
+        <App 
+          themes={themes} 
+          activeTheme={activeTheme} 
+          onThemeSwitch={switchTheme} 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
+      </BrowserRouter>
     </ChakraProvider>
   );
 };
