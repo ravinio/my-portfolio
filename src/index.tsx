@@ -74,11 +74,11 @@ const MyApp = () => {
         body: 'Gideon Roman, cursive',
       },
       watney: {
-        wrapperBackground: '#201C18',
+        wrapperBackground: '#050C14',
         cardBackground: 'rgba(86, 227, 159, 0.15)',
-        gradient1: '#452225',
-        gradient2: '#4F3523',
-        gradient3: '#51483F',
+        gradient1: '#4F4F58',
+        gradient2: '#18141E',
+        gradient3: '#090C10',
         color: '#56e39f',
         heading: 'Expletus Sans, cursive',
         body: 'Armata, sans-serif'
