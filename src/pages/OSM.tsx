@@ -154,11 +154,11 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
               >
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>industry</Text>
-                    <Text fontSize="l" style={bodyStyle}>Medical staffing</Text>
+                    <Text fontSize="l" style={bodyStyle}>Medical Staffing</Text>
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>role</Text>
-                    <Text fontSize="l" style={bodyStyle}>Lead UX Designer and Front-End Developer</Text>
+                    <Text fontSize="l" style={bodyStyle}>UX Designer and Front-End Developer</Text>
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>timeline</Text>
@@ -166,9 +166,9 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>tags</Text>
-                    <Flex gap="2">
+                    <Flex gap="2" flexWrap={{ base: 'wrap', md: 'nowrap' }}>
                       {['UI/UX Design', 'Branding', 'React', 'Contentful'].map(tag => (
-                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground}>
+                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground} borderRadius="full">
                           {tag}
                         </Tag>
                       ))}
@@ -223,7 +223,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>main challenge</Text>
@@ -281,7 +281,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>user research</Text>
@@ -337,7 +337,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>design process</Text>

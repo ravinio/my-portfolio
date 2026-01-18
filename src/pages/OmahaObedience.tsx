@@ -164,9 +164,9 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>tags</Text>
-                    <Flex gap="2">
+                    <Flex gap="2" flexWrap={{ base: 'wrap', md: 'nowrap' }}>
                       {['UI/UX Design', 'HTML/CSS', 'React', 'Branding'].map(tag => (
-                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground}>
+                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground} borderRadius="full">
                           {tag}
                         </Tag>
                       ))}
@@ -221,7 +221,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>market & platform research</Text>
@@ -311,7 +311,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>results & impact</Text>

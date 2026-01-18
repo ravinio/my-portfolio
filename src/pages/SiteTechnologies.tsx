@@ -171,7 +171,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>tags</Text>
-                    <Flex gap="2">
+                    <Flex gap="2" flexWrap={{ base: 'wrap', md: 'nowrap' }}>
                       {['UX Team Lead', 'UX Audit', 'Design System Architect', 'End-to-End Redesign'].map(tag => (
                         <Tag key={tag} bg={styles.color} color={styles.wrapperBackground} borderRadius="full">
                           {tag}
@@ -232,7 +232,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>main challenge</Text>
@@ -288,7 +288,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>user research</Text>
@@ -355,7 +355,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>design process</Text>
@@ -365,6 +365,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                       borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
+                      maxH={{ base: "400px", md: "100%"}}
                     />
                   </Flex>
 

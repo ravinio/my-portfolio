@@ -164,9 +164,9 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                   </Flex>
                   <Flex flexDirection="column">
                     <Text fontSize="xl" style={headingStyle}>tags</Text>
-                    <Flex gap="2">
+                    <Flex gap="2" flexWrap={{ base: 'wrap', md: 'nowrap' }}>
                       {['UI/UX Design', 'React', 'Contentful'].map(tag => (
-                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground}>
+                        <Tag key={tag} bg={styles.color} color={styles.wrapperBackground} borderRadius="full">
                           {tag}
                         </Tag>
                       ))}
@@ -221,7 +221,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>design process</Text>
@@ -291,7 +291,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                 >
                   <Flex
                     flexDirection="column"
-                    gap='5'
+                    gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text fontSize="3xl" style={headingStyle}>results</Text>
@@ -314,7 +314,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                     <Text style={bodyStyle}>
                       When I revealed the site to my partner, their reaction was everything I’d hoped for, they were deeply touched. It was a reminder that design can be a love language, too.
                     </Text>
-                    <Text mb={4} style={bodyStyle}>
+                    <Text my={4} style={bodyStyle}>
                       Even if no one else ever reads the words or browses the images, the time and care put into this site made it one of the most rewarding projects I’ve ever done. It’s a living archive of our relationship, and one I’m proud to have crafted.
                     </Text>                  
                   </Flex>
