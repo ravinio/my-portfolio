@@ -10,11 +10,16 @@ import {
   DrawerOverlay, 
   Flex, 
   IconButton, 
+  Menu,
+  MenuButton, 
+  MenuList, 
+  MenuItem,
   Spacer, 
+  Text,
   useDisclosure, 
   useTheme 
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import ThemeSwitcherButton from '../components/themeSwitcher'
 
 interface TopNavProps {
@@ -27,51 +32,53 @@ interface TopNavProps {
 
 const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave }) => {
   const theme = useTheme();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const navFont = theme.styles[activeTheme].body
   const color = theme.styles[activeTheme]?.color
   const drawerColor = theme.styles[activeTheme]?.color
   const navDrawerBackground = theme.styles[activeTheme]?.cardBackground
 
+  const buttonStyle = {
+    color: theme.styles[activeTheme].color,
+    fontWeight:'400',
+    cursor: 'none'
+  };
+
   const buttonHoverStyle = {
     background: theme.styles[activeTheme].cardBackground,
     cursor: 'none'
   };
 
-  const navLinks = ['Home', 'Projects', 'Contact']
-  const { isOpen, onOpen, onClose } = useDisclosure();
+    const dropdownHoverStyle = {
+    background: theme.styles[activeTheme].wrapperBackground,
+    cursor: 'none'
+  };
 
-  const renderNavLink = (content: string) => {
+  const projectSubtitle = {
+    color: 'rgba(255,255,255,.5)',
+    fontWeight:'400'
+  };
 
-    const scrollId = content
-    
-    const handleClickNav = () => {
-      onClose(); 
-      setTimeout(() => {
-        const targetElement = document.getElementById(scrollId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 500);
-    };
+  const projectLinks = [
+    { name: 'SITE Technologies', path: '/pages/site-technologies' },
+    { name: 'OneStaff Medical', path: '/pages/onestaff-medical' },
+    { name: 'Sister M.A.E Designs', path: '/pages/sistermae' },
+    { name: 'Omaha Obedience', path: '/pages/omaha-obedience' },
+    { name: 'Chasing Ravens', path: '/pages/chasing-ravens' },
+  ];
 
-    return (
-      <ul key={content}>
-        <Button
-          onClick={handleClickNav}
-          color={{ base: drawerColor, md: color }}
-          variant='ghost'
-          fontWeight='400'
-          transition='background 1s ease'
-          _hover={buttonHoverStyle}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
-          {content}
-        </Button>
-      </ul>
-    )
-  }
+  const handleHomeScroll = (targetId: string) => {
+    onClose();
+    if (window.location.pathname === '/') {
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = `/#${targetId}`;
+    }
+  };
+
+ 
 
   return (
     <>
@@ -111,13 +118,45 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
 
         <Spacer />
 
+        {/* desktop view */}
         <Center 
           display={{ base: 'none', md: 'flex' }}
           height='fit-content'
-          color={color}
           gap='20px'
         >
-          {navLinks.map(nav => renderNavLink(nav))}
+          <Button variant='ghost' style={buttonStyle} _hover={buttonHoverStyle} onClick={() => window.location.href='/'}>
+            Home
+          </Button>
+
+          <Menu isLazy>
+            <MenuButton 
+              as={Button} 
+              variant='ghost' 
+              style={buttonStyle}
+              rightIcon={<ChevronDownIcon />} 
+              _hover={buttonHoverStyle}
+              _active={buttonHoverStyle}
+            >
+              Projects
+            </MenuButton>
+            <MenuList bg={navDrawerBackground} border="none" boxShadow="xl">
+              {projectLinks.map((proj) => (
+                <MenuItem 
+                  key={proj.path} 
+                  bg="transparent" 
+                  style={buttonStyle}
+                  _hover={dropdownHoverStyle}
+                  onClick={() => window.location.href = proj.path}
+                >
+                  {proj.name}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
+
+          <Button variant='ghost' style={buttonStyle} _hover={buttonHoverStyle} onClick={() => handleHomeScroll('contact')}>
+            Contact
+          </Button>
         </Center>
 
         <Spacer />
@@ -141,17 +180,18 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
           <Button
             as={IconButton}
             icon={<HamburgerIcon />}
-            background='none'
-            color={color}
             variant='ghost'
+            style={buttonStyle}
+            _hover={buttonHoverStyle}
             onClick={onOpen}
+            aria-label="Toggle Navigation"
           />
           <Drawer
             isOpen={isOpen}
             placement='right'
             onClose={onClose}
           >
-            <DrawerOverlay backdropFilter='blur(5px)' />
+            <DrawerOverlay backdropFilter='blur(8px)' />
             <DrawerContent
               background={navDrawerBackground}
             >
@@ -174,7 +214,12 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
                   gap='20px'
                   fontFamily={navFont}
                 >
-                  {navLinks.map(nav => renderNavLink(nav))}
+                  <Button variant='ghost' style={buttonStyle} _hover={buttonHoverStyle} onClick={() => window.location.href='/'}>Home</Button>
+                  <Button variant='ghost' style={buttonStyle} _hover={buttonHoverStyle} onClick={() => handleHomeScroll('Contact')}>Contact</Button>
+                  <Text style={projectSubtitle}>Projects</Text>
+                  {projectLinks.map(proj => (
+                    <Button key={proj.path} variant='ghost' style={buttonStyle} _hover={buttonHoverStyle} onClick={() => window.location.href = proj.path}>{proj.name}</Button>
+                  ))}
                 </Center>
             </DrawerContent>
           </Drawer>

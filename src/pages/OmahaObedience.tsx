@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Center, Flex, Image, SlideFade, Tag, Text, VStack, useTheme } from '@chakra-ui/react';
-import TopNav from '../components/Navs/topNavOmaha'
+import TopNav from '../components/topNav';
 import ButttonLink from '../components/siteLinkBtn';
 import HeroImage from '../assets/pages/omahaobedience/puppy-training.png';
 import NotebookLM from '../assets/pages/omahaobedience/notebook-lm.png';

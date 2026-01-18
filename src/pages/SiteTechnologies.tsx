@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Center, Flex, Image, Link, SlideFade, Tag, Text, VStack, useTheme } from '@chakra-ui/react';
-import TopNav from '../components/Navs/topNavEscapay';
+import TopNav from '../components/topNav';
 import ButttonLink from '../components/siteLinkBtn';
 import HeroImage from '../assets/pages/sitetechnologies/figma-thumbnail.png';
 import MainChallenge from '../assets/pages/sitetechnologies/main-challenge.gif';
