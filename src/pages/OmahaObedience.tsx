@@ -62,6 +62,11 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
     backdropFilter: 'blur(20px)',
   };
 
+  const heroHeadingStyle = {
+    color: "#ffffff",
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   const headingStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
@@ -126,7 +131,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                 borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
-                  <Text fontSize="4xl" style={headingStyle}>omaha obedience</Text>
+                  <Text fontSize="4xl" style={heroHeadingStyle}>omaha obedience</Text>
                 </Box>
                 <Box position="absolute" bottom="0" right="0" p="6">
                   <ButttonLink 

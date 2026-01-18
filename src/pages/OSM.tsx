@@ -64,6 +64,11 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
     backdropFilter: 'blur(20px)',
   };
 
+  const heroHeadingStyle = {
+    color: "#ffffff",
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   const headingStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
@@ -128,7 +133,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
-                  <Text fontSize="4xl" style={headingStyle}>onestaff medical</Text>
+                  <Text fontSize="4xl" style={heroHeadingStyle}>onestaff medical</Text>
                 </Box>
                 <Box position="absolute" bottom="0" right="0" p="6">
                   <ButttonLink 

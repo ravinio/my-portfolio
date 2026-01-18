@@ -63,6 +63,11 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
     backdropFilter: 'blur(20px)',
   };
 
+  const heroHeadingStyle = {
+    color: "#ffffff",
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   const headingStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
@@ -133,7 +138,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                 borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
-                  <Text fontSize="4xl" style={headingStyle}>site technologies</Text>
+                  <Text fontSize="4xl" style={heroHeadingStyle}>site technologies</Text>
                 </Box>
                 <Box position="absolute" bottom="0" right="0" p="6">
                   <ButttonLink 

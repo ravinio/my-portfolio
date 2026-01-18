@@ -17,8 +17,8 @@ const ButtonLinK: React.FC<ButtonLinkProps> = ({ activeTheme, siteLink, onMouseE
     const textOpacityTransition = 'opacity 0.2s ease-in-out 0.1s';
 
     const buttonStyle = {
-        background: theme.styles[activeTheme].color,
-        color: theme.styles[activeTheme].wrapperBackground,
+        background: "#ffffff",
+        color: theme.styles[activeTheme].gradient3,
         cursor: 'none'
     };
 

@@ -62,6 +62,11 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
     backdropFilter: 'blur(20px)',
   };
 
+  const heroHeadingStyle = {
+    color: "#ffffff",
+    fontFamily: theme.styles[activeTheme].heading,
+  };
+
   const headingStyle = {
     color: theme.styles[activeTheme].color,
     fontFamily: theme.styles[activeTheme].heading,
@@ -126,7 +131,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                 borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
-                  <Text fontSize="4xl" style={headingStyle}>sister m.a.e. designs</Text>
+                  <Text fontSize="4xl" style={heroHeadingStyle}>sister m.a.e. designs</Text>
                 </Box>
                 <Box position="absolute" bottom="0" right="0" p="6">
                   <ButttonLink 
