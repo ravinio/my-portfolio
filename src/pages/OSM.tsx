@@ -196,7 +196,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                   flexDirection="column"
                   gap={{ base: '15px', md: '30px' }}
                   padding={{ base: '15px', md: '30px' }}
-                  borderRadius="20px"
+                  borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
                   <p style={bodyStyle}>
@@ -225,7 +225,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     <Image
                       src={MainChallengeNurse}
                       alt="Legacy Onestaff platform"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -235,7 +235,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text mb={4} style={bodyStyle}>
@@ -283,7 +283,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     <Image
                       src={RealNurse}
                       alt="One of OSM's travel nurse testimonials"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -293,7 +293,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text style={bodyStyle}>
@@ -339,14 +339,14 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     <Image
                       src={OsmBlog}
                       alt="OneStaff's new Blog Page"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
                     <Image
                       src={ArizonaHome}
                       alt="OneStaff's new Home Page"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -356,7 +356,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text style={bodyStyle}>
@@ -407,7 +407,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 flexDirection="column"
                 gap={{ base: '15px', md: '30px' }}
                 padding={{ base: '15px', md: '30px' }}
-                borderRadius="20px"
+                borderRadius="lg"
                 mb={{ base: '150', md: '200' }}
               >
                 <Text fontSize="3xl" style={headingStyle}>results & impact</Text>

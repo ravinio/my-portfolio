@@ -101,7 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         <CardBody>
           <Flex gap="2" flexWrap="wrap" mb="4">
-            {['UI/UX Design', 'React', 'Branding', 'Commercial'].map((tag, idx) => (
+            {tags && tags.map((tag, idx) => (
               <Text
                 key={idx}
                 fontSize="xs"

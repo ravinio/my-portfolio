@@ -59,10 +59,10 @@ const MyApp = () => {
       },
       Moira: {
         wrapperBackground: '#121818',
-        cardBackground: 'rgba(70, 78, 65, 0.25)',
+        cardBackground: 'rgba(56, 39, 23, 0.45)',
         gradient1: '#791D22',
         gradient2: '#474F3E',
-        gradient3: '#27313A',
+        gradient3: '#131D27',
         color: '#FFBE6D',
         heading: 'Old Standard TT, serif',
         body: 'Jost, sans-serif'

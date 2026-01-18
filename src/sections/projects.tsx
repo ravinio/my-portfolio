@@ -7,7 +7,7 @@ import ToaGif from '../assets/projectCards/gifs/toa.gif'
 import ChasingRavensIcon from '../assets/projectCards/icons/chasingraven.svg'
 import ChasingRavensGif from '../assets/projectCards/gifs/chasingravens.gif'
 import EscapayIcon from '../assets/projectCards/icons/escapay.png'
-import EscapayGif from '../assets/projectCards/gifs/escapay.gif'
+import SITEGif from '../assets/projectCards/gifs/site-technologies.gif'
 import SistermaeGif from '../assets/projectCards/gifs/sistermae.gif'
 import ProjectCard from '../components/projectCard'
 
@@ -18,39 +18,23 @@ interface ProjectsProps {
   onMouseLeave: () => void;
 }
 
-const projects = [
+const projects = [ 
+  {
+    icon: EscapayIcon, //this needs to change
+    gif: SITEGif,
+    title: 'SITE Technologies',
+    tags: ['UX Team Lead', 'UX Audit', 'Design System Architect', 'End-to-End Redesign'],
+    description: ['An AI-powered platform streamlining property management.'],
+    page: '/pages/site-technologies',
+  },
   {
     icon: OsmIcon,
     gif: OsmGif,
     title: 'OneStaff Medical',
-    tags: ['UI/UX Design', 'React', 'Figma', 'Branding', 'Contentful'],
-    description: ['Medical staffing website rebrand and redesign'],
+    tags: ['UI/UX Design', 'Figma', 'React', 'Branding', 'Contentful'],
+    description: ['Medical staffing website rebrand and redesign.'],
     page: '/pages/onestaff-medical',
-  },
-  {
-    icon: ToaIcon,
-    gif: ToaGif,
-    title: 'Omaha Obedience',
-    tags: ['User Research', 'Branding', 'HTML/CSS'],
-    description: ['Local boarding and dog training'],
-    page: '/pages/omaha-obedience',
-  },
-  {
-    icon: ChasingRavensIcon,
-    gif: ChasingRavensGif,
-    title: 'Chasing Ravens',
-    tags: ['UI/UX Design', 'React', 'Contentful'],
-    description: ['Personal food blog I hope no one ever reads'],
-    page: '/pages/chasing-ravens',
-  },
-  {
-    icon: EscapayIcon,
-    gif: EscapayGif,
-    title: 'Escapay',
-    tags: ['Figma', 'Design', 'Branding'],
-    description: ['Figma custom component library and design system'],
-    page: '/pages/escapay',
-  },
+  },  
   {
     icon: EscapayIcon, //this needs to change
     gif: SistermaeGif, 
@@ -59,6 +43,22 @@ const projects = [
     description: ['A scalable e-commerce website powered by Shopify for personalized wedding stationary.'],
     page: '/pages/sistermae',
   },
+  {
+    icon: ToaIcon,
+    gif: ToaGif,
+    title: 'Omaha Obedience',
+    tags: ['User Research', 'UX Design', 'Branding', 'HTML/CSS'],
+    description: ['Local boarding and dog training.'],
+    page: '/pages/omaha-obedience',
+  },
+  {
+    icon: ChasingRavensIcon,
+    gif: ChasingRavensGif,
+    title: 'Chasing Ravens',
+    tags: ['React', 'Contentful', 'UI/UX Design'],
+    description: ['Personal food blog I hope no one ever reads.'],
+    page: '/pages/chasing-ravens',
+  }
 ]
 
 const Projects: React.FC<ProjectsProps> = ({

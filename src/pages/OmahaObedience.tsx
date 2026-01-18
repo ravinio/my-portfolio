@@ -194,7 +194,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                   flexDirection="column"
                   gap={{ base: '15px', md: '30px' }}
                   padding={{ base: '15px', md: '30px' }}
-                  borderRadius="20px"
+                  borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
                   <p style={bodyStyle}>
@@ -223,7 +223,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                     <Image
                       src={NotebookLM}
                       alt="Legacy Onestaff platform"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -233,7 +233,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text mb={4} style={bodyStyle}>
@@ -280,7 +280,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                 flexDirection="column"
                 gap={{ base: '15px', md: '30px' }}
                 padding={{ base: '15px', md: '30px' }}
-                borderRadius="20px"
+                borderRadius="lg"
               >
                 <Text fontSize="3xl" style={headingStyle}>design process</Text>
                 <Text style={bodyStyle}>
@@ -313,7 +313,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                     <Image
                       src={HomePage}
                       alt="Omaha Obedience puppy train website"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -323,7 +323,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text style={bodyStyle}>

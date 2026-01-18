@@ -194,7 +194,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                   flexDirection="column"
                   gap={{ base: '15px', md: '30px' }}
                   padding={{ base: '15px', md: '30px' }}
-                  borderRadius="20px"
+                  borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
                   <p style={bodyStyle}>
@@ -223,7 +223,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                     <Image
                       src={AllBlogs}
                       alt="Chasing Ravens Blog Page"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -233,7 +233,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text mb={4} style={bodyStyle}>
@@ -293,7 +293,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                     <Image
                       src={StarreInne}
                       alt="Photo of Ye Olde Starre Inne food with a breif description and a link to the blogs page"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -303,7 +303,7 @@ const ChasingRavens: React.FC<ChasingRavensProps> = ({ themes, activeTheme, onTh
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text style={bodyStyle}>

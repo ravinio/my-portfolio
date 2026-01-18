@@ -4,7 +4,7 @@ import Wrapper from './sections/wrapper'
 import OneStaffMedical from './pages/OSM';
 import OmahaObedience from './pages/OmahaObedience';
 import ChasingRavens from './pages/ChasingRavens';
-import Escapay from './pages/Escapay';
+import SiteTechnologies from './pages/SiteTechnologies';
 import SisterMae from './pages/Sistermae';
 
 interface AppProps {
@@ -75,9 +75,9 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
         }
       />
       <Route
-        path="/pages/escapay"
+        path="/pages/site-technologies"
         element={
-          <Escapay 
+          <SiteTechnologies 
             themes={themes}
             activeTheme={activeTheme}
             onThemeSwitch={switchTheme}

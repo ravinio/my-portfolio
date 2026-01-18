@@ -194,7 +194,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                   flexDirection="column"
                   gap={{ base: '15px', md: '30px' }}
                   padding={{ base: '15px', md: '30px' }}
-                  borderRadius="20px"
+                  borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
                   <Text mb={4} style={bodyStyle}>
@@ -238,7 +238,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                     <Image
                       src={InspoImg}
                       alt="Mood board for Sister M.A.E. website design"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -248,7 +248,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text mb={4} style={bodyStyle}>
@@ -321,7 +321,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                     <Image
                       src={FigmaAssets}
                       alt="Figma assets for Sister M.A.E. website"
-                      borderRadius="20px"
+                      borderRadius="lg"
                       objectFit="cover"
                       maxW="100%"
                     />
@@ -331,7 +331,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                     style={tileBackgroundStyle}
                     flexDirection="column"
                     padding={{ base: '15px', md: '30px' }}
-                    borderRadius="20px"
+                    borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
                     <Text mb={4} style={bodyStyle}>
@@ -373,7 +373,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                 alignItems="left"
                 flexDirection="column"
                 padding={{ base: '15px', md: '30px' }}
-                borderRadius="20px"
+                borderRadius="lg"
                 mb={{ base: '150', md: '200' }}
               >
                 <Text mb={{ base: '15px', md: '30px' }} fontSize="3xl" style={headingStyle}>results & impact</Text>
