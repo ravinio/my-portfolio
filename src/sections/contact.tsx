@@ -72,7 +72,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEn
   return (
     <Center 
       h='100vh'
-      p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}    
+      p={{ base: '0px 16px 16px', md: '0px 24px 24px'}}    
       className={styles.about}
       id='contact'
     >
@@ -83,8 +83,8 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEn
           alignItems='left'
           flexDirection='column' 
           justifyContent='center' 
-          gap={{ base: '15px', md: '30px' }}
-          padding={{ base: '15px', md: '30px' }}
+          gap={{ base: '16px', md: '24px' }}
+          padding={{ base: '16px', md: '24px' }}
           borderRadius='lg'
         >
           <h3 style={subHeadingStyle}>get in touch</h3>

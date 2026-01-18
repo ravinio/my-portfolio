@@ -111,7 +111,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
           <Center
             flexDirection='column'
             maxWidth='1500px'
-            m={{ base: '107px 15px 15px 15px', md: '107px 30px 30px 30px' }}
+            m={{ base: '107px 16px 16px 16px', md: '107px 24px 24px 24px' }}
           >
             {/* HERO SECTION */}
             <SlideFade 
@@ -204,8 +204,8 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                   margin="auto"
                   alignItems="left"
                   flexDirection="column"
-                  gap={{ base: '15px', md: '30px' }}
-                  padding={{ base: '15px', md: '30px' }}
+                  gap={{ base: '16px', md: '24px' }}
+                  padding={{ base: '16px', md: '24px' }}
                   borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
@@ -248,7 +248,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                   <Flex 
                     style={tileBackgroundStyle}
                     flexDirection="column"
-                    padding={{ base: '15px', md: '30px' }}
+                    padding={{ base: '16px', md: '24px' }}
                     borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
@@ -304,7 +304,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                   <Flex 
                     style={tileBackgroundStyle}
                     flexDirection="column"
-                    padding={{ base: '15px', md: '30px' }}
+                    padding={{ base: '16px', md: '24px' }}
                     borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
@@ -371,7 +371,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                   <Flex 
                     style={tileBackgroundStyle}
                     flexDirection="column"
-                    padding={{ base: '15px', md: '30px' }}
+                    padding={{ base: '16px', md: '24px' }}
                     borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
@@ -398,7 +398,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                 width={{ base: '100%', md: '708px' }}
                 alignItems="left"
                 flexDirection="column"
-                padding={{ base: '15px', md: '30px' }}
+                padding={{ base: '16px', md: '24px' }}
                 borderRadius="lg"
                 mb={{ base: '150', md: '200' }}
               >

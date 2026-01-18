@@ -58,7 +58,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, o
     <Center 
       h='100vh'
       position='relative'
-      p={{ base: '0px 15px 15px', md: '0px 30px 30px'}}    
+      p={{ base: '0px 16px 16px', md: '0px 24px 24px'}}    
       id='home'
     >
       <Flex 

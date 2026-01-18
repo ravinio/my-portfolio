@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Box, Flex, Grid, Image, useTheme } from '@chakra-ui/react';
+import { Flex, Text, useTheme } from '@chakra-ui/react';
 import { useSpring, animated, config } from '@react-spring/web'
 
 interface SkillTileProps {
   activeTheme: string;
   tileTitle: string;
-  items: { src: string; label: string }[];
+  tags: string[];
 }
 
-const SkillTile: React.FC<SkillTileProps> = ({ activeTheme, tileTitle, items }) => {
+const SkillTile: React.FC<SkillTileProps> = ({ activeTheme, tileTitle, tags }) => {
   const theme = useTheme();
 
   const backgroundStyle = {
@@ -21,9 +21,10 @@ const SkillTile: React.FC<SkillTileProps> = ({ activeTheme, tileTitle, items }) 
     fontFamily: theme.styles[activeTheme].heading,
   };
 
-  const bodyStyle = {
-    color: theme.styles[activeTheme].color,
-    fontFamily: theme.styles[activeTheme].body,
+  const chipStyle = {
+    width: "fit-content",
+    background: theme.styles[activeTheme].color,
+    color: theme.styles[activeTheme].wrapperBackground,
   };
 
   const [boxInView, setBoxInView] = useState(false);
@@ -56,35 +57,39 @@ const SkillTile: React.FC<SkillTileProps> = ({ activeTheme, tileTitle, items }) 
   }, []);
 
   return (
-    <animated.div ref={boxRef} style={boxAnimation}>
-      <Box style={bodyStyle}>
+    <animated.div 
+      ref={boxRef} 
+      style={{
+        ...boxAnimation, 
+        flex: 1, 
+        display: 'flex'
+      }}
+    >
         <Flex
           style={backgroundStyle}
-          alignItems="left"
           flexDirection="column"
-          justifyContent="center"
-          gap={{ base: '15px', md: '30px' }}
-          padding={{ base: '15px', md: '30px' }}
+          gap={{ base: '16px', md: '24px' }}
+          padding={{ base: '16px', md: '24px' }}
           borderRadius="lg"
         >
           <h3 style={subHeadingStyle}>{tileTitle}</h3>
-          <Grid
-            gap='15px'
-            templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)' }}>
-            {items.map((item, index) => (
-              <Box key={index} width='50%'>
-                <Image
-                  boxSize={{ base: '55px', md: '75px' }}
-                  objectFit="contain"
-                  src={item.src}
-                  alt={item.label}
-                />
-                <p>{item.label}</p>
-              </Box>
+          <Flex
+            gap='12px'
+            flexWrap='wrap'>
+            {tags && tags.map((tag, idx) => (
+              <Text
+                key={idx}
+                fontSize="xs"
+                px="2"
+                py="1"
+                borderRadius="full"
+                style={chipStyle}
+              >
+                {tag}
+              </Text>
             ))}
-          </Grid>
+          </Flex>
         </Flex>
-      </Box>
     </animated.div>
   );
 };

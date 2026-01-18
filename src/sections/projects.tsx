@@ -78,9 +78,9 @@ const Projects: React.FC<ProjectsProps> = ({
     <Center 
       id='projects' 
       h='auto' 
-      p={{ base: '50px 15px', md: '100px 30px' }}    
+      p={{ base: '50px 16px', md: '100px 24px' }}    
       flexDirection='column' 
-      gap={{ base: '15px', md: '30px' }}
+      gap={{ base: '16px', md: '24px' }}
     >
       <h1 style={sectionHeadingStyle}>my projects</h1>
 
@@ -88,7 +88,7 @@ const Projects: React.FC<ProjectsProps> = ({
         <Flex
           key={project.title}
           direction={{ base: 'column', md: idx % 2 === 0 ? 'row' : 'row-reverse' }}
-          gap="30px"
+          gap="24px"
           mb="60px"
           w="100%"
           maxW="1329px"

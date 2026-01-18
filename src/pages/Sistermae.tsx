@@ -104,7 +104,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
           <Center
             flexDirection='column'
             maxWidth='1000px'
-            m={{ base: '107px 15px 15px 15px', md: '107px 30px 30px 30px' }}
+            m={{ base: '107px 16px 16px 16px', md: '107px 24px 24px 24px' }}
           >
             {/* HERO SECTION */}
             <SlideFade 
@@ -197,8 +197,8 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                   margin="auto"
                   alignItems="left"
                   flexDirection="column"
-                  gap={{ base: '15px', md: '30px' }}
-                  padding={{ base: '15px', md: '30px' }}
+                  gap={{ base: '16px', md: '24px' }}
+                  padding={{ base: '16px', md: '24px' }}
                   borderRadius="lg"
                 >
                   <Text fontSize="3xl" style={headingStyle}>project brief</Text>
@@ -252,7 +252,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                   <Flex 
                     style={tileBackgroundStyle}
                     flexDirection="column"
-                    padding={{ base: '15px', md: '30px' }}
+                    padding={{ base: '16px', md: '24px' }}
                     borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
@@ -335,7 +335,7 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                   <Flex 
                     style={tileBackgroundStyle}
                     flexDirection="column"
-                    padding={{ base: '15px', md: '30px' }}
+                    padding={{ base: '16px', md: '24px' }}
                     borderRadius="lg"
                     width={{ base: '100%', md: '50%' }}
                   >
@@ -377,11 +377,11 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
                 width={{ base: '100%', md: '708px' }}
                 alignItems="left"
                 flexDirection="column"
-                padding={{ base: '15px', md: '30px' }}
+                padding={{ base: '16px', md: '24px' }}
                 borderRadius="lg"
                 mb={{ base: '150', md: '200' }}
               >
-                <Text mb={{ base: '15px', md: '30px' }} fontSize="3xl" style={headingStyle}>results & impact</Text>
+                <Text mb={{ base: '16px', md: '24px' }} fontSize="3xl" style={headingStyle}>results & impact</Text>
                 <Text style={bodyStyle}>
                   The new site acts as a hybrid marketing and sales tool. By connecting her Etsy shop directly to Shopify, we ensured inventory sync and simplified management — but with the major benefit of:
                 </Text>

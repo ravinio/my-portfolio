@@ -26,8 +26,8 @@ a:hover {
     transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
     background-color: var(--cursor-color);
     opacity: .5;
-    width: 30px; 
-    height: 30px;
+    width: 24px; 
+    height: 24px;
 }
 
 /* Firefox */
