@@ -15,7 +15,7 @@ a:hover {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,1);
+    background-color: var(--cursor-color);
     pointer-events: none; 
     z-index: 9999;
     transform: translate(-50%, -50%);
@@ -24,7 +24,8 @@ a:hover {
 
 .hoverCursor {
     transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
-    background-color: rgba(255,255,255,.5);
+    background-color: var(--cursor-color);
+    opacity: .5;
     width: 30px; 
     height: 30px;
 }

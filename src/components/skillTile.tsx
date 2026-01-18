@@ -65,7 +65,7 @@ const SkillTile: React.FC<SkillTileProps> = ({ activeTheme, tileTitle, items }) 
           justifyContent="center"
           gap={{ base: '15px', md: '30px' }}
           padding={{ base: '15px', md: '30px' }}
-          borderRadius="20px"
+          borderRadius="lg"
         >
           <h3 style={subHeadingStyle}>{tileTitle}</h3>
           <Grid

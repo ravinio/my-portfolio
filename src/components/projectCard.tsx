@@ -39,6 +39,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     fontFamily: theme.styles[activeTheme].heading,
   };
 
+  const chipStyle = {
+    background: theme.styles[activeTheme].color,
+    color: theme.styles[activeTheme].wrapperBackground,
+  };
+
   const [boxInView, setBoxInView] = useState(false);
   const boxRef = useRef(null);
 
@@ -81,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <Card
         height="fit-content"
         overflow="hidden"
-        borderRadius="20px"
+        borderRadius="lg"
         style={backgroundStyle}
         boxShadow="lg"
         w={{ md: '757px', sm: 'auto' }}
@@ -96,20 +101,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         <CardBody>
           <Flex gap="2" flexWrap="wrap" mb="4">
-          {['UI/UX Design', 'React', 'Branding', 'Commercial'].map((tag, idx) => (
-            <Text
-              key={idx}
-              fontSize="xs"
-              px="2"
-              py="1"
-              borderRadius="md"
-              bg="gray.200"
-              color="gray.700"
-            >
-              {tag}
-            </Text>
-          ))}
-        </Flex>
+            {['UI/UX Design', 'React', 'Branding', 'Commercial'].map((tag, idx) => (
+              <Text
+                key={idx}
+                fontSize="xs"
+                px="2"
+                py="1"
+                borderRadius="full"
+                style={chipStyle}
+              >
+                {tag}
+              </Text>
+            ))}
+          </Flex>
           <Text fontSize="xl" fontWeight="bold" style={subHeadingStyle} _groupHover={{ textDecoration: 'underline' }}>
             {title}
           </Text>

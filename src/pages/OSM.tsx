@@ -125,7 +125,7 @@ const OSM: React.FC<OSMProps> = ({ themes, activeTheme, onThemeSwitch, onMouseEn
                 backgroundRepeat='no-repeat'
                 backgroundSize='cover'
                 backgroundPosition='0% 70%'
-                borderRadius='20px'
+                borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
                   <Text fontSize="4xl" style={headingStyle}>onestaff medical</Text>

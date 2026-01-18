@@ -38,12 +38,12 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
     cursor: 'none'
   };
 
-  const navLinks = ['skills', 'projects', 'contact']
+  const navLinks = ['Home', 'Projects', 'Contact']
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const renderNavLink = (content: string) => {
 
-    const scrollId = `${content.toLocaleLowerCase()}`
+    const scrollId = content
     
     const handleClickNav = () => {
       onClose(); 

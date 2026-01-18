@@ -123,7 +123,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
                 backgroundRepeat='no-repeat'
                 backgroundSize='cover'
                 backgroundPosition='0% 70%'
-                borderRadius='20px'
+                borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
                   <Text fontSize="4xl" style={headingStyle}>omaha obedience</Text>

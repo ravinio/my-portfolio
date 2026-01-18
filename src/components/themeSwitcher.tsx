@@ -43,7 +43,7 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {activeTheme.charAt(0).toLowerCase() + activeTheme.slice(1)}
+      {activeTheme}
     </Button>
   );
 };

@@ -85,7 +85,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEn
           justifyContent='center' 
           gap={{ base: '15px', md: '30px' }}
           padding={{ base: '15px', md: '30px' }}
-          borderRadius='20px'
+          borderRadius='lg'
         >
           <h3 style={subHeadingStyle}>get in touch</h3>
           <p style={bodyStyle}>

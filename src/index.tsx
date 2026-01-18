@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom';
 import App from './App'
-import Picture1 from './assets/bg/salazar.webp'
-import Picture2 from './assets/bg/halliwell.webp'
-import Picture3 from './assets/bg/wallace.webp'
-import Picture4 from './assets/bg/ichabod.webp'
-import Picture5 from './assets/bg/watney.webp'
-import Picture6 from './assets/bg/gengar.webp'
 import styles from './styles/global.module.css'
 
 const MyApp = () => {
-  const themes = ['salazar', 'halliwell', 'wallace', 'ichabod', 'watney', 'gengar'];
+  const themes = ['Salazar', 'HAL', 'Gengar', 'Moira'];
   const [activeTheme, setActiveTheme] = useState(() => {
     const savedTheme = localStorage.getItem('activeTheme');
     return savedTheme && themes.includes(savedTheme) ? savedTheme : themes[0];
@@ -33,7 +27,7 @@ const MyApp = () => {
           bg: '#000'
         }
       },
-      salazar: {
+      Salazar: {
         wrapperBackground: '#101819',
         cardBackground: 'rgba(16, 24, 25, 0.25)',
         gradient1: '#2f3e46',
@@ -43,47 +37,17 @@ const MyApp = () => {
         heading: 'Playfair Display, serif',
         body: 'Plus Jakarta Sans, sans-serif'
       },
-      halliwell: {
-        wrapperBackground: '#223343',
-        cardBackground: 'rgba(117, 139, 253, 0.25)',
-        gradient1: '#ca5b3d',
-        gradient2: '#783843',
-        gradient3: '#151F29',
-        color: '#758bfd',
-        heading: 'Philosopher, sans-serif',
-        body: 'Bellefair, serif'
+      HAL: {
+        wrapperBackground: '#F4FDF8',
+        cardBackground: 'rgba(179, 174, 153, 0.25)',
+        gradient1: '#FFBE95',
+        gradient2: '#FF8251',
+        gradient3: '#83736B',
+        color: '#1B2623',
+        heading: 'Space Grotesk, serif',
+        body: '"Helvetica Neue", Helvetica, Arial, sans-serif'
       },
-      wallace: {
-        wrapperBackground: '#202B31',
-        cardBackground: 'rgba(79, 105, 122, 0.25)',
-        gradient1: '#C1CED7',
-        gradient2: '#4f697a',
-        gradient3: '#384A57',
-        color: '#f6e706',
-        heading: 'Poppins, sans-serif',
-        body: 'Poppins, sans-serif'
-      },
-      ichabod: {
-        wrapperBackground: '#1f1e1e',
-        cardBackground: 'rgba(31, 30, 30, 0.80)',
-        gradient1: '#2A1A1F',
-        gradient2: '#764134',
-        gradient3: '#792301',
-        color: '#ff7518',
-        heading: 'Beth Ellen, cursive',
-        body: 'Gideon Roman, cursive',
-      },
-      watney: {
-        wrapperBackground: '#050C14',
-        cardBackground: 'rgba(86, 227, 159, 0.15)',
-        gradient1: '#4F4F58',
-        gradient2: '#18141E',
-        gradient3: '#090C10',
-        color: '#56e39f',
-        heading: 'Expletus Sans, cursive',
-        body: 'Armata, sans-serif'
-      },
-      gengar: {
+      Gengar: {
         wrapperBackground: '#524386',
         cardBackground: 'rgba(197, 197, 208, 0.25)',
         gradient1: '#9D99BA',
@@ -93,19 +57,29 @@ const MyApp = () => {
         heading: 'Sulphur Point, sans-serif',
         body: 'Sulphur Point, sans-serif'
       },
-    },
-    images: {
-      salazar: Picture1,
-      halliwell: Picture2,
-      wallace: Picture3,
-      ichabod: Picture4,
-      watney: Picture5,
-      gengar: Picture6,
-    },
+      Moira: {
+        wrapperBackground: '#121818',
+        cardBackground: 'rgba(70, 78, 65, 0.25)',
+        gradient1: '#791D22',
+        gradient2: '#474F3E',
+        gradient3: '#27313A',
+        color: '#FFBE6D',
+        heading: 'Old Standard TT, serif',
+        body: 'Jost, sans-serif'
+      },
+    }
   });
 
   
   const cursorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+  const themeColor = customTheme.styles[activeTheme].color;
+
+  document.documentElement.style.setProperty('--cursor-color', themeColor);
+  
+  localStorage.setItem('activeTheme', activeTheme);
+}, [activeTheme, customTheme]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

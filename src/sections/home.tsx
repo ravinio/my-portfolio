@@ -85,14 +85,15 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, o
           <animated.div style={textAnimation}>
           <Box pb='24px'>
             <h1>ravin io</h1>
-            <h2>ui/ux designer in a front-end developer’s body</h2>
+            <h2>my designs are mysterious and important</h2>
           </Box>
           <Box pb='24px'>
             <p style={bodyStyle}>
-              I enjoy making things look beautiful and engaging while maintaining functionality. 
-              Along side this, I specialize in working in collaborative environments to accomplish an all-encompassing goal. 
-              I contribute to this dynamic by designing wire frames and prototypes with practical implementations in mind, meticulously considering user needs and project objectives. 
-              I then bring these concepts to life by translating them into elegant and efficient code, ensuring that the final product not only meets but exceeds expectations.
+              If you caught the <i>Severance</i> reference above, we’re already off to a great start. 
+              On this side of the elevator, I’m a Lead UX Designer who thrives at the intersection of complex technology and human-centered design. 
+              Moving beyond my roots in front-end development I now lead design teams focusing on empathy-driven and scalable design systems, 
+              accessible architecture, and turning high-level "what-ifs" into functional reality. 
+              All this by capitalizing on AI-powered research workflows to accelerate output and justify design decisions at lightning speed.
               <br />
               For more info, check out my resume{' '}
                 <Link

@@ -124,7 +124,7 @@ const Escapay: React.FC<EscapayProps> = ({ themes, activeTheme, onThemeSwitch, o
                 backgroundRepeat='no-repeat'
                 backgroundSize='cover'
                 backgroundPosition='center'
-                borderRadius='20px'
+                borderRadius='lg'
               >
                 <Box position="absolute" bottom="0" left="0" p="6">
                   <Text fontSize="4xl" style={headingStyle}>escapay</Text>
