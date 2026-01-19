@@ -93,6 +93,7 @@ const OmahaObedience: React.FC<OmahaObedienceProps> = ({ themes, activeTheme, on
 
       {/* Container */}
       <Box           
+        id='main-scroll-container'
         position='absolute' 
         width='100%' 
         height='100vh'

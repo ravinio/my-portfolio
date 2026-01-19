@@ -92,7 +92,8 @@ const SisterMae: React.FC<SisterMaeProps> = ({ themes, activeTheme, onThemeSwitc
       <Box css={gradientAnimation}></Box>
 
       {/* Container */}
-      <Box           
+      <Box          
+        id='main-scroll-container' 
         position='absolute' 
         width='100%' 
         height='100vh'

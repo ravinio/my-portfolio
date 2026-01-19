@@ -76,6 +76,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
         />
         <Box css={gradientAnimation}></Box>
         <Box 
+          id='main-scroll-container'
           position='absolute' 
           width='100%' 
           height='100vh'

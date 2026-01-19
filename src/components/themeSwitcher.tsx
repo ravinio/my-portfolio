@@ -26,6 +26,7 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
 
   const buttonHoverStyle = {
     background: theme.styles[activeTheme].cardBackground,
+    //transition: 'background 2s ease',
     cursor: 'none'
   };
 
@@ -36,10 +37,15 @@ const ThemeSwitcherButton: React.FC<ThemeSwitcherButtonProps> = ({ themes, onThe
       rightIcon={<MdPalette />}
       fontFamily={bodyFont}
       variant="ghost"
+      borderRadius='full'
       fontWeight="400"
       zIndex="100"
-      transition='background 1s ease'
-      _hover={buttonHoverStyle}
+      transition='background 1s ease, transform 1s ease'
+      _hover={{
+        ...buttonHoverStyle,
+        transform: 'translateY(-3px)',
+        boxShadow: 'sm'
+      }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

@@ -22,7 +22,7 @@ const projects = [
   {
     icon: EscapayIcon, //this needs to change
     gif: SITEGif,
-    title: 'SITE Technologies',
+    title: 'site technologies',
     tags: ['UX Team Lead', 'UX Audit', 'Design System Architect', 'End-to-End Redesign'],
     description: ['An AI-powered platform streamlining property management.'],
     page: '/pages/site-technologies',
@@ -30,7 +30,7 @@ const projects = [
   {
     icon: OsmIcon,
     gif: OsmGif,
-    title: 'OneStaff Medical',
+    title: 'onestaff medical',
     tags: ['UI/UX Design', 'Figma', 'React', 'Branding', 'Contentful'],
     description: ['Medical staffing website rebrand and redesign.'],
     page: '/pages/onestaff-medical',
@@ -38,7 +38,7 @@ const projects = [
   {
     icon: EscapayIcon, //this needs to change
     gif: SistermaeGif, 
-    title: 'Sister M.A.E. Designs',
+    title: 'sister m.a.e. designs',
     tags: ['Figma', 'Design', 'Shopify'],
     description: ['A scalable e-commerce website powered by Shopify for personalized wedding stationary.'],
     page: '/pages/sistermae',
@@ -46,7 +46,7 @@ const projects = [
   {
     icon: ToaIcon,
     gif: ToaGif,
-    title: 'Omaha Obedience',
+    title: 'omaha obedience',
     tags: ['User Research', 'UX Design', 'Branding', 'HTML/CSS'],
     description: ['Local boarding and dog training.'],
     page: '/pages/omaha-obedience',
@@ -54,7 +54,7 @@ const projects = [
   {
     icon: ChasingRavensIcon,
     gif: ChasingRavensGif,
-    title: 'Chasing Ravens',
+    title: 'chasing ravens',
     tags: ['React', 'Contentful', 'UI/UX Design'],
     description: ['Personal food blog I hope no one ever reads.'],
     page: '/pages/chasing-ravens',
