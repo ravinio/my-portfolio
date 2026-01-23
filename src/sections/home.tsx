@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from '@react-spring/web';
 import { Box, Center, Flex, Link, useTheme } from '@chakra-ui/react'
 import styles from '../styles/global.module.css'
-import Resume from '../assets/resume/IoResume.pdf'
+import Resume from '../assets/resume/Ravin-Io-2026-Resume.pdf'
 import ContactButtons from '../components/contactBtns'
 
 interface HomeProps {
