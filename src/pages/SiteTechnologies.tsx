@@ -292,7 +292,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                     gap='4'
                     width={{ base: '100%', md: '50%' }}
                   >
-                    <Text fontSize="3xl" style={headingStyle}>user research</Text>
+                    <Text fontSize="3xl" style={headingStyle}>evidence-based design</Text>
                     <Image
                       src={UserResearch}
                       alt="Property with zones highlighted"
@@ -333,7 +333,7 @@ const SiteTechnologies: React.FC<SiteTechnologiesProps> = ({ themes, activeTheme
                     </Text>
                     <Text mb={4} ml={6} style={bodyStyle}>
                       <li>
-                        <b>Strategic Justification</b>: We utilized advanced AI tools to synthesize industry data and competitive benchmarks at lightning speed.                      
+                        <b>Strategic Justification</b>: Utilized our Google Notebooks to synthesize industry and company data and answer dev questions at lightning speed.
                       </li>
                     </Text>
                     <Text ml={6} style={bodyStyle}>
