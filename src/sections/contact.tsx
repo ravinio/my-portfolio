@@ -101,7 +101,7 @@ const Contact: React.FC<ContactProps> = ({ activeTheme, onThemeSwitch, onMouseEn
             Check out the figma file I used to design this website{' '}
                 <Link
                 textDecor='underline' 
-                href='https://www.figma.com/file/ghXqRDpx0wdnb22gE7GkKW/stuff?type=design&node-id=106%3A654&mode=design&t=wKy0QbeVRTqP8Ixq-1'
+                href='https://www.figma.com/design/qBPDeiBzmUPJ8ajhDawSoW/Ravin-Io-Designs?node-id=2211-2038&t=yXCgbO0DK5E7njvp-1'
                 isExternal
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
