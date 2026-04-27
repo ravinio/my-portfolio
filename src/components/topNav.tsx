@@ -238,6 +238,21 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
               transform: 'translateY(-3px)',
               boxShadow: 'sm'
             }} 
+            onClick={() => handleHomeScroll('receipts')}
+          >
+            Receipts
+          </Button>
+          
+          <Button 
+            variant='ghost' 
+            borderRadius='full' 
+            style={buttonStyle} 
+            transition='background 1s ease, transform 1s ease'
+            _hover={{
+              ...buttonHoverStyle,
+              transform: 'translateY(-3px)',
+              boxShadow: 'sm'
+            }} 
             onClick={() => handleHomeScroll('contact')}
           >
             Contact
@@ -330,6 +345,20 @@ const TopNav: React.FC<TopNavProps> = ({ themes, activeTheme, onThemeSwitch, onM
                     onClick={() => window.location.href='/'}
                   >
                     Home
+                  </Button>
+                  <Button 
+                    variant='ghost' 
+                    borderRadius='full' 
+                    style={buttonStyle} 
+                    transition='background 1s ease, transform 1s ease'
+                    _hover={{
+                      ...buttonHoverStyle,
+                      transform: 'translateY(-3px)',
+                      boxShadow: 'sm'
+                    }} 
+                    onClick={() => handleHomeScroll('receipts')}
+                  >
+                    Receipts
                   </Button>
                   <Button 
                     variant='ghost' 

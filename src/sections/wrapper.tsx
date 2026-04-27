@@ -7,6 +7,7 @@ import TopNav from '../components/topNav'
 import Home from '../sections/home'
 import Skills from '../sections/skills'
 import Projects from './projects'
+import Receipts from '../sections/receipts'
 import Contact from '../sections/contact'
 import { keyframes } from '@emotion/react'
 
@@ -100,6 +101,13 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
               onMouseLeave={onMouseLeave} 
             />
           
+            <Receipts 
+              activeTheme={activeTheme} 
+              onThemeSwitch={switchTheme} 
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave} 
+            />
+
             <Contact 
               activeTheme={activeTheme} 
               onThemeSwitch={switchTheme} 

@@ -30,9 +30,9 @@ const MyApp = () => {
       Salazar: {
         wrapperBackground: '#101819',
         cardBackground: 'rgba(16, 24, 25, 0.25)',
-        gradient1: '#2f3e46',
+        gradient1: '#84a98c',
         gradient2: '#52796f',
-        gradient3: '#84a98c',
+        gradient3: '#2f3e46',
         color: '#cad2c5',
         heading: 'Playfair Display, serif',
         body: 'Plus Jakarta Sans, sans-serif'
