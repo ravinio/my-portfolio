@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Box, Card, CardBody, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react';
+import { Box, Card, Flex, Image, Link, Text, useTheme } from '@chakra-ui/react';
 import { useSpring, animated, config } from '@react-spring/web';
 
 interface ReviewCardProps {
