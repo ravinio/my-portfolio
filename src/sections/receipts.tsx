@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Center, Flex, Link, Text, useTheme, VStack } from '@chakra-ui/react'
+import { Flex, useTheme, VStack } from '@chakra-ui/react'
 import { useSpring, animated } from '@react-spring/web'
-import styles from '../styles/global.module.css'
 import ReviewCard from '../components/reviewCard'
 import JayneAvatar from '../assets/receipts/Jayne-avatar.png'
 import MarcAvatar from '../assets/receipts/Marc-avatar.png'
