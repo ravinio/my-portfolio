@@ -145,7 +145,7 @@ const Receipts: React.FC<ReceiptsProps> = ({ activeTheme, onThemeSwitch, onMouse
             >
                 <h3 style={subHeadingStyle}>receipts</h3>
                 <p style={bodyStyle}>
-                    I’ve always believed that the best products are a byproduct of healthy, high-performing teams. These are the receipts of my professional journey—the testimonials from peers and stakeholders who have seen my process firsthand. 
+                    I’ve always believed that the best products are a direct result of healthy, high-performing teams. These are the receipts of my professional journey—the testimonials from peers and stakeholders who have seen my process firsthand. 
                 </p>
                 <p style={bodyStyle}>
                     From architecting design systems, navigating complex research, and empowering fellow designers to do their best work. These voices confirm the standard of quality and the human-centric approach I bring to every project.

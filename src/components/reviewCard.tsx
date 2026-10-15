@@ -35,6 +35,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   const textStyle = { color: theme.styles[activeTheme].wrapperBackground, fontFamily: theme.styles[activeTheme].body };
   const linkStyle = { color: theme.styles[activeTheme].gradient3, fontFamily: theme.styles[activeTheme].body };
   const headingStyle = { color: theme.styles[activeTheme].wrapperBackground, fontFamily: theme.styles[activeTheme].heading };
+  const avatarBackgroundStyle = { backgroundColor: theme.styles[activeTheme].color };
 
   const [boxInView, setBoxInView] = useState(false);
   const boxRef = useRef(null);
@@ -81,12 +82,13 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
             {/* Who?? Desktop View */}
             <Flex direction={'row'} gap="3" display={{ base: 'none', md: 'flex' }}>
                 {/* Avatar */}
-                <Box flexShrink={0}>
+                <Box flexShrink={0} style={avatarBackgroundStyle}>
                     <Image
                     src={avatar}
                     borderRadius="full"
                     boxSize="80px"
                     objectFit="cover"
+                    mixBlendMode="luminosity"
                     />
                 </Box>
                 {/* Info */}
@@ -111,12 +113,13 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
             {/* Who?? Mobile View */}
             <Flex direction={'row'} alignItems={'center'} gap="2" display={{ base: 'flex', md: 'none' }}>
                 {/* Avatar */}
-                <Box flexShrink={0}>
+                <Box flexShrink={0} style={avatarBackgroundStyle}>
                     <Image
-                    src={avatar}
-                    borderRadius="full"
-                    boxSize="70px"
-                    objectFit="cover"
+                      src={avatar}
+                      borderRadius="full"
+                      boxSize="70px"
+                      objectFit="cover"                    
+                      mixBlendMode="luminosity"
                     />
                 </Box>
                 {/* Info */}

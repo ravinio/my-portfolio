@@ -57,10 +57,13 @@ a:hover {
 
 .myImage {
     border-radius: 500px 500px 0px 0px;
-    background-image: url('../assets/me/me-in-shambles.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    background-image: url('../assets/me/me-professional.jpg'), var(--dynamic-theme-gradient);
+    background-blend-mode: luminosity;
+    filter: contrast(180%) grayscale(80%) saturate(500%);
+    opacity: .5;
 }
 
 h1 {

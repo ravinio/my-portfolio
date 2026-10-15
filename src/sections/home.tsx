@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from '@react-spring/web';
 import { Box, Center, Flex, Link, useTheme } from '@chakra-ui/react'
 import styles from '../styles/global.module.css'
-import Resume from '../assets/resume/Ravin-Io-Resume-2026.pdf'
+import Resume from '../assets/resume/Ravin-Io-Oct142026-Resume.pdf'
 import ContactButtons from '../components/contactBtns'
 
 interface HomeProps {
@@ -10,9 +10,10 @@ interface HomeProps {
   onThemeSwitch: (theme: string) => void;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  imgGradient: string;
 }
 
-const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave }) => {
+const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, onMouseLeave, imgGradient }) => {
   const theme = useTheme();
 
   const switchTheme = () => {
@@ -74,6 +75,7 @@ const Home: React.FC<HomeProps> = ({ activeTheme, onThemeSwitch, onMouseEnter, o
           mt={{ base: '20', sm: '0' }}
           width={{ base: '90vw', sm: '35vw', lg: '400px' }}
           height={{ base: '40vh', sm: '60vh', md: '80vh' }}
+          style={{ '--dynamic-theme-gradient': imgGradient } as React.CSSProperties}
         ></Box>
         </animated.div>
         <Flex

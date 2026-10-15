@@ -63,6 +63,12 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
     fontFamily: theme.styles[activeTheme].body,
   };
 
+  const imgGradient = `linear-gradient(
+  ${theme.styles[activeTheme].gradient3}, 
+  ${theme.styles[activeTheme].wrapperBackground},
+  ${theme.styles[activeTheme].gradient3}
+)`;
+
   return (
       <Box
         style={backgroundStyle}
@@ -90,6 +96,7 @@ const App: React.FC<AppProps> = ({ themes, onThemeSwitch, activeTheme, onMouseEn
               onThemeSwitch={switchTheme} 
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave} 
+              imgGradient={imgGradient}
             />
                   
             <Skills activeTheme={activeTheme} onThemeSwitch={switchTheme} />
